@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алина Волкова](https://up.htmlacademy.ru/adaptive/10/user/285131).
-* Наставник: Дмитрий Безуглый.
+* Наставник: [Дмитрий Безуглый](https://htmlacademy.ru/profile/shalfey41).
 
 ---
 
