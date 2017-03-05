@@ -2,13 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <titleМишка: Каталог товаров</title>
+    <title>Мишка: Каталог товаров</title>
   </head>
   <body>
     <header class="pade-header">
-      <div class="pade-header__logo logo">
+      <a class="pade-header__logo logo" href="index.html">
         <img src="http://placehold.it/90x40" width="90" height="40" alt="Лого Мишка">
-      </div>
+      </a>
       <nav class="main-nav  main-nav--closed">
         <button class="main-nav__button " type="button">Открыть меню</button>
         <ul class="main-nav__list  main-nav__wrapper">
@@ -32,7 +32,7 @@
               <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
               <div class="catalog-item__discr">Рост 30 см, вес 200 г</div>
             </a>
-            <a class="catalog-item__price  js-buy" href="form.html">1200 руб.</a>
+            <a class="catalog-item__price  js-buy" href="form.html" title="Купить">1200 руб.</a>
           </article>
           <article class="catalog-item">
             <a class="catalog-item__link" href="#">
@@ -40,7 +40,7 @@
               <h3 class="catalog-item__title">Корзинка для белья</h3>
               <div class="catalog-item__discr">Диаметр 15 см, высота 10 см</div>
             </a>
-            <a class="catalog-item__price  js-buy" href="form.html">1200 руб.</a>
+            <a class="catalog-item__price  js-buy" href="form.html" title="Купить">690 руб.</a>
           </article>
           <article class="catalog-item">
             <a class="catalog-item__link" href="#">
@@ -48,10 +48,20 @@
               <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
               <div class="catalog-item__discr">Диаметр 30 см, высота 30 см</div>
             </a>
-            <a class="catalog-item__price  js-buy" href="form.html">1200 руб.</a>
+            <a class="catalog-item__price  js-buy" href="form.html" title="Купить">1500 руб.</a>
           </article>
         </div>
       </section>
+      <article class="charter video">
+        <div class="charter__wrapper">
+          <h3 class="charter__title--making">Процесс производства</h3>
+          <iframe width="260" height="150" src="https://www.youtube.com/embed/qii2w9O6r_0?rel=0" frameborder="0" allowfullscreen></iframe>
+          <div class="video__wrapper">
+            <p class="video__discr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="btn js-buy" href="form.html" title="Заказать этот товар">Сделать заказ</a>
+          </div>
+        </div>
+      </article>
     </main>
 
     <footer class="page-footer">
@@ -74,16 +84,16 @@
           <span class="form-sizes__title">Выберите размер:</span>
           <ul class="form-sizes__list">
             <li class="form-sizes__item">
-              <input class="form-sizes__radioinput" id="size-s" type="radio" name="product-size" value="S" checked>
-              <label class="btn  btn--radio" for="size-s" title="Выбрать товар маленького размера">S</label>
+              <input class="form-sizes__value" id="size-s" type="checkbox" name="product-size" value="S" checked>
+              <label class="btn  btn--size-value" for="size-s" title="Выбрать товар маленького размера">S</label>
             </li>
             <li class="form-sizes__item">
-              <input class="form-sizes__radioinput" id="size-m" type="radio" name="product-size" value="M">
-              <label class="btn  btn--radio" for="size-m" title="Выбрать товар среднего размера">M</label>
+              <input class="form-sizes__value" id="size-m" type="checkbox" name="product-size" value="M">
+              <label class="btn  btn--size-value" for="size-m" title="Выбрать товар среднего размера">M</label>
             </li>
             <li class="form-sizes__item">
-              <input class="form-sizes__radioinput" id="size-l" type="radio" name="product-size" value="L">
-              <label class="btn  btn--radio" for="size-l" title="Выбрать товар большого размера">L</label>
+              <input class="form-sizes__value" id="size-l" type="checkbox" name="product-size" value="L">
+              <label class="btn  btn--size-value" for="size-l" title="Выбрать товар большого размера">L</label>
             </li>
           </ul>
           <button class="btn  btn--color-tiffany" type="submit" href="form.html" title="Добавить товар в корзину">Добавить</button>
