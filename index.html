@@ -91,17 +91,21 @@
           <dd class="contacts__discr">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</dd>
         </dl>
       </section>
-      <section class="map">Карта</section>
+      <section class="map">
+        <iframe class="map__googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6169192119512!2d30.323051112419144!3d59.938498591832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1488700873209" height="458" style="border:0" allowfullscreen></iframe>
+      </section>
       <div class="feedback">
-        <a class="btn" href="form.html">Напишите нам</a>
+        <div class="feedback__wrapper">
+          <a class="btn" href="form.html">Напишите нам</a>
+        </div>
       </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <ul class="page-footer__social  social-links">
-          <li class="sosial-link  social-link--inst"><a href="#">Инстаграм</a></li>
-          <li class="sosial-link  social-link--fb"><a href="#">Фэйсбук</a></li>
-          <li class="sosial-link  social-link--tw"><a href="#">Твиттер</a></li>
+          <li class="social-links__item"><a class="sosial-link  social-link--inst" href="#">Инстаграм</a></li>
+          <li class="social-links__item"><a class="sosial-link  social-link--fb" href="#">Фэйсбук</a></li>
+          <li class="social-links__item"><a class="sosial-link  social-link--tw" href="#">Твиттер</a></li>
         </ul>
         <div class="page-footer__copyright">
           Разработано
@@ -109,5 +113,28 @@
         </div>
       </div>
     </footer>
+    <div class="modal-content">
+      <div class="modal-content__wrapper">
+        <h2 class="charter-title  charter-title--case-upper">Добавить в корзину</h2>
+        <form class="form-sizes" action="https://echo.htmlacademy.ru/" method="POST" >
+          <span class="form-sizes__title">Выберите размер:</span>
+          <ul class="form-sizes__list">
+            <li class="form-sizes__item">
+              <input class="form-sizes__radioinput" id="size-s" type="radio" name="product-size" value="S" checked>
+              <label class="btn btn--radio" for="size-s" title="Выбрать товар маленького размера">S</label>
+            </li>
+            <li class="form-sizes__item">
+              <input class="form-sizes__radioinput" id="size-m" type="radio" name="product-size" value="M">
+              <label class="btn btn--radio" for="size-m" title="Выбрать товар среднего размера">M</label>
+            </li>
+            <li class="form-sizes__item">
+              <input class="form-sizes__radioinput" id="size-l" type="radio" name="product-size" value="L">
+              <label class="btn btn--radio" for="size-l" title="Выбрать товар большого размера">L</label>
+            </li>
+          </ul>
+          <button class="btn btn--color-tiffany" type="submit" href="form.html" title="Добавить товар в корзину">Добавить</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
