@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <titleМишка: Каталог товаров</title>
+  </head>
+  <body>
+    <header class="pade-header">
+      <div class="pade-header__logo logo">
+        <img src="http://placehold.it/90x40" width="90" height="40" alt="Лого Мишка">
+      </div>
+      <nav class="main-nav  main-nav--closed">
+        <button class="main-nav__button " type="button">Открыть меню</button>
+        <ul class="main-nav__list  main-nav__wrapper">
+          <li class="main-nav__item"><a class="main-nav__link">Каталог товаров</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Вязание на заказ</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: <span>пока пуста<span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pade-title">
+        <h1 class="pade-title__wrapper">Каталог товаров</h1>
+      </section>
+      <section class="charter catalog">
+        <div class="charter__wrapper">
+          <article class="catalog-item">
+            <a class="catalog-item__link" href="#">
+              <image src="http://placehold.it/260x197" width="260" height="197" alt="Зайчик-попрыгайчик">
+              <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
+              <div class="catalog-item__discr">Рост 30 см, вес 200 г</div>
+            </a>
+            <a class="catalog-item__price  js-buy" href="form.html">1200 руб.</a>
+          </article>
+          <article class="catalog-item">
+            <a class="catalog-item__link" href="#">
+              <image src="http://placehold.it/260x197" width="260" height="197" alt="Корзинка для белья">
+              <h3 class="catalog-item__title">Корзинка для белья</h3>
+              <div class="catalog-item__discr">Диаметр 15 см, высота 10 см</div>
+            </a>
+            <a class="catalog-item__price  js-buy" href="form.html">1200 руб.</a>
+          </article>
+          <article class="catalog-item">
+            <a class="catalog-item__link" href="#">
+              <image src="http://placehold.it/260x197" width="260" height="197" alt="Большая корзинка для игрушек">
+              <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
+              <div class="catalog-item__discr">Диаметр 30 см, высота 30 см</div>
+            </a>
+            <a class="catalog-item__price  js-buy" href="form.html">1200 руб.</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <ul class="page-footer__social  social-links">
+          <li class="social-links__item"><a class="sosial-link  social-link--inst" href="#">Инстаграм</a></li>
+          <li class="social-links__item"><a class="sosial-link  social-link--fb" href="#">Фэйсбук</a></li>
+          <li class="social-links__item"><a class="sosial-link  social-link--tw" href="#">Твиттер</a></li>
+        </ul>
+        <div class="page-footer__copyright">
+          Разработано
+          <a class="page-footer__cooryright-logo" href="https://htmlacademy.ru">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-content charter">
+      <div class="charter__wrapper">
+        <h2 class="charter__title  charter__title--case-upper">Добавить в корзину</h2>
+        <form class="form-sizes" action="https://echo.htmlacademy.ru/" method="POST" >
+          <span class="form-sizes__title">Выберите размер:</span>
+          <ul class="form-sizes__list">
+            <li class="form-sizes__item">
+              <input class="form-sizes__radioinput" id="size-s" type="radio" name="product-size" value="S" checked>
+              <label class="btn  btn--radio" for="size-s" title="Выбрать товар маленького размера">S</label>
+            </li>
+            <li class="form-sizes__item">
+              <input class="form-sizes__radioinput" id="size-m" type="radio" name="product-size" value="M">
+              <label class="btn  btn--radio" for="size-m" title="Выбрать товар среднего размера">M</label>
+            </li>
+            <li class="form-sizes__item">
+              <input class="form-sizes__radioinput" id="size-l" type="radio" name="product-size" value="L">
+              <label class="btn  btn--radio" for="size-l" title="Выбрать товар большого размера">L</label>
+            </li>
+          </ul>
+          <button class="btn  btn--color-tiffany" type="submit" href="form.html" title="Добавить товар в корзину">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
