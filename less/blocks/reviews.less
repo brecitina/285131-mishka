@@ -1,0 +1,26 @@
+.reviews {
+
+  &__btn {
+    height: 50px;
+    width: 150px;
+    margin: 0;
+    background-color: @light;
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
+
+  &__btn--prev {
+    transform: scaleX(-1);
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    opacity: 0.6;
+  }
+
+  &__btn:active {
+    opacity: 0.3;
+  }
+}
