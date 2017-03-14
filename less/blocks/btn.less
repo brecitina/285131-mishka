@@ -18,6 +18,32 @@
 
   &:active {
   color: @light03;
-  background-color: @minor;
   }
+
+  &--color-tiffany {
+    width: 100%;
+    color: @light;
+    background-color: @green;
+  }
+
+  &--size-value {
+    width: 78px;
+    border-color: @gray;
+  }
+
+  &--size-value:hover,
+  &--size-value:focus {
+    color: @minor;
+    background-color: @light;
+    border-color: #c7c7c7;
+  }
+
+  &--size-value:checked,
+  &--size-value:active {
+    color: @minor;
+    background-color: @light;
+    border-color: @green;
+  }
+
+  
 }
