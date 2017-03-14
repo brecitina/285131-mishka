@@ -28,6 +28,24 @@
       0 3px 0 @green;
   }
 
+  &__cell--email a:hover,
+  &__cell--email a:focus {
+    color: @green-sec;
+    background-color: @light;
+    box-shadow: 
+      0 2px 0 @light,
+      0 3px 0 @green-sec;
+  }
+
+  &__cell--email a:active {
+    color: @green-sec;
+    background-color: @light;
+    box-shadow: 
+      0 2px 0 @light,
+      0 3px 0 @green-sec;
+    opacity: 0.3;
+  }
+
   &__cell--adress {
     padding-right: 45px;
   }
