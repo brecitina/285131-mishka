@@ -1,7 +1,13 @@
 .page-promo {
   padding: 0;
+
+  &__item {
+    font-size: 0;
+    line-height: 0;
+  }
   
   &__link {
+    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
   }
@@ -13,5 +19,10 @@
    &__link--icon-brick {
     color: @light;
     background-color: @green-sec;
+  }
+
+  &__link--icon-lamp:active,
+  &__link--icon-brick:active {
+    color: @light03;
   }
 }
