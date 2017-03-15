@@ -34,11 +34,11 @@
               <ul class="form-knitting__list">
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-accesory" type="radio" name="knitting-type" value="accesory" checked>
-                  <label class="form-knitting__radiobutton" for="knitting-accesory" title="Выбрать">Аксессуар для интерьера</label>
+                  <label class="form-knitting__choice form-knitting__choice--radio" for="knitting-accesory" title="Выбрать">Аксессуар для интерьера</label>
                 </li>
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-toy" type="radio" name="knitting-type" value="toy">
-                  <label class="form-knitting__radiobutton" for="knitting-toy" title="Выбрать">Детская игрушка</label>
+                  <label class="form-knitting__choice form-knitting__choice--radio" for="knitting-toy" title="Выбрать">Детская игрушка</label>
                 </li>
               </ul>
             </fieldset>
@@ -47,27 +47,27 @@
               <ul class="form-knitting__list">
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-white" type="checkbox" name="knitting-color" value="white" checked>
-                  <label class="form-knitting__checkbox" for="knitting-white" title="Выбрать">Белый</label>
+                  <label class="form-knitting__choice" for="knitting-white" title="Выбрать">Белый</label>
                 </li>
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-grey" type="checkbox" name="knitting-color" value="grey" checked>
-                  <label class="form-knitting__checkbox" for="knitting-grey" title="Выбрать">Серый</label>
+                  <label class="form-knitting__choice" for="knitting-grey" title="Выбрать">Серый</label>
                 </li>
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-tiffany" type="checkbox" name="knitting-color" value="tiffany">
-                  <label class="form-knitting__checkbox" for="knitting-tiffany" title="Выбрать">"Тиффани"</label>
+                  <label class="form-knitting__choice" for="knitting-tiffany" title="Выбрать">"Тиффани"</label>
                 </li>
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-black" type="checkbox" name="knitting-color" value="black">
-                  <label class="form-knitting__checkbox" for="knitting-black" title="Выбрать">Черный</label>
+                  <label class="form-knitting__choice" for="knitting-black" title="Выбрать">Черный</label>
                 </li>
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-pink" type="checkbox" name="knitting-color" value="pink">
-                  <label class="form-knitting__checkbox" for="knitting-pink" title="Выбрать">Розовый</label>
+                  <label class="form-knitting__choice" for="knitting-pink" title="Выбрать">Розовый</label>
                 </li>
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-orange" type="checkbox" name="knitting-color" value="orange">
-                  <label class="form-knitting__checkbox" for="knitting-orange" title="Выбрать">Оранжевый</label>
+                  <label class="form-knitting__choice" for="knitting-orange" title="Выбрать">Оранжевый</label>
                 </li>
               </ul>
             </fieldset>
@@ -90,18 +90,18 @@
             </fieldset>
             <fieldset class="form-knitting__section">
               <legend class="form-knitting__legend">Тел</legend>
-              <input class="form-knitting__item  form-knitting__customer-info--phone" type="tel" name="customer-phone" placeholder="+7 XXX XX XX*" required>
+              <input class="form-knitting__customer-info  form-knitting__customer-info--phone" type="tel" name="customer-phone" placeholder="+7 XXX XX XX*" required>
             </fieldset>
             <fieldset class="form-knitting__section">
               <legend class="form-knitting__legend">E-mail</legend>
-              <input class="form-knitting__item  form-knitting__customer-info--email" type="email" name="customer-email" placeholder="Ваш Email*" required>
+              <input class="form-knitting__customer-info  form-knitting__customer-info--email" type="email" name="customer-email" placeholder="Ваш Email*" required>
             </fieldset>
             <fieldset class="form-knitting__section">
               <legend class="form-knitting__legend">Доп</legend>
-              <textarea class="form-knitting__item  form-knitting__customer-info--comment" rows="5" name="customer-comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="form-knitting__customer-info  form-knitting__customer-info--comment" rows="6" name="customer-comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
             <span class="form-knitting__footnote">*Поля обязательны для заполнения</span>
-            <button class="btn" type="submit" title="Отправить заказ в обработку">ОТПРАВИТЬ ЗАКАЗ</button>
+            <button class="form-knitting__btn btn" type="submit" title="Отправить заказ в обработку">Отправить заказ</button>
           </form>
         </div>
       </section>
