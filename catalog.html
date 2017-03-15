@@ -8,7 +8,7 @@
   <body class="page">
     <header class="page-header">
       <a class="page-header__logo logo" href="index.html">
-        <img src="img/logo-mobile.svg" width="90" height="40" alt="Лого Мишка">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Мишка">
       </a>
       <nav class="main-nav  main-nav--closed">
         <button class="main-nav__button text-hidden" type="button" title="Открыть меню">Открыть меню</button>
@@ -28,7 +28,7 @@
       <section class="charter catalog">
         <div class="charter__wrapper">
           <article class="catalog-item">
-            <a class="catalog-item__link" href="#"><img src="http://placehold.it/260x197" width="260" height="197" alt="Зайчик-попрыгайчик"></a>
+            <a class="catalog-item__link" href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик"></a>
             <div class="catalog-item__wrapper">
               <a class="catalog-item__link" href="#">
                 <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
@@ -38,7 +38,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <a class="catalog-item__link" href="#"><img src="http://placehold.it/260x197" width="260" height="197" alt="Корзинка для белья"></a>
+            <a class="catalog-item__link" href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья"></a>
             <div class="catalog-item__wrapper">
               <a class="catalog-item__link" href="#">
                 <h3 class="catalog-item__title">Корзинка для белья</h3>
@@ -48,7 +48,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <a class="catalog-item__link" href="#"><img src="http://placehold.it/260x197" width="260" height="197" alt="Большая корзинка для игрушек"></a>
+            <a class="catalog-item__link" href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек"></a>
             <div class="catalog-item__wrapper">
               <a class="catalog-item__link" href="#">
                 <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
@@ -61,7 +61,7 @@
       </section>
       <article class="charter video">
         <div class="charter__wrapper">
-          <h3 class="charter__title--making">Процесс производства</h3>
+          <h3 class="charter__title charter__title--making">Процесс производства</h3>
           <iframe width="260" height="150" src="https://www.youtube.com/embed/qii2w9O6r_0?rel=0" allowfullscreen></iframe>
           <div class="video__wrapper">
             <p class="video__discr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -74,21 +74,21 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <ul class="page-footer__social  social-links">
-          <li class="social-links__item"><a class="sosial-link  social-link--inst text-hidden" href="#">Инстаграм</a></li>
-          <li class="social-links__item"><a class="sosial-link  social-link--fb text-hidden" href="#">Фэйсбук</a></li>
-          <li class="social-links__item"><a class="sosial-link  social-link--tw text-hidden" href="#">Твиттер</a></li>
+          <li class="social-links__item"><a class="social-link  social-link--inst text-hidden" href="#">Инстаграм</a></li>
+          <li class="social-links__item"><a class="social-link  social-link--fb text-hidden" href="#">Фэйсбук</a></li>
+          <li class="social-links__item"><a class="social-link  social-link--tw text-hidden" href="#">Твиттер</a></li>
         </ul>
-        <div class="page-footer__copyright">
+        <a class="page-footer__copyright" href="https://htmlacademy.ru">
           Разработано
-          <a class="page-footer__cooryright-logo" href="https://htmlacademy.ru">HTML Academy</a>
-        </div>
+          <span class="page-footer__cooryright-logo text-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
-    <div class="modal-content charter">
-      <div class="charter__wrapper">
-        <h2 class="charter__title  charter__title--case-upper">Добавить в корзину</h2>
+    <div class="modal-content">
+      <div class="modal-content__wrapper">
+        <h2 class="modal-content__title">Добавить в корзину</h2>
         <form class="form-sizes" action="https://echo.htmlacademy.ru/" method="POST" >
-          <span class="form-sizes__title">Выберите размер:</span>
+          <p class="form-sizes__title">Выберите размер:</p>
           <ul class="form-sizes__list">
             <li class="form-sizes__item">
               <input class="form-sizes__value" id="size-s" type="checkbox" name="product-size" value="S" checked>

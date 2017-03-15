@@ -7,23 +7,26 @@
   line-height: 20px;
   color: @minor;
   text-align: center;
+  text-transform: uppercase;
   background-color: @light;
   border: 2px solid @minor;
-
-  &:hover,
-  &:focus {
-  color: @light;
-  background-color: @minor;
-  }
-
-  &:active {
-  color: @light03;
-  }
 
   &--color-tiffany {
     width: 100%;
     color: @light;
     background-color: @green;
+    border-color: @green;
+  }
+  
+  &:hover,
+  &:focus {
+  color: @light;
+  border-color: @minor;
+  background-color: @minor;
+  }
+
+  &:active {
+  color: @light03;
   }
 
   &--size-value {
