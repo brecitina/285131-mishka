@@ -1,0 +1,176 @@
+.form-knitting {
+
+  &__discr {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: @minor;
+    background-color: @light;
+  }
+
+  &__section {
+    margin: 32px 0;
+    padding: 0;
+    border: none;
+    border-top: 1px solid @green;
+  }
+
+  &__legend {
+    min-width: 60px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+    color: @green;
+    background-color: @light;
+  }
+
+  &__list {
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__choice {
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-top: 22px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 64px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+    color: @main;
+    background-color: @light;
+  }
+
+  &__choice--radio {
+    margin-top: 5px;
+  }
+
+  &__choice::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid @minor;
+  }
+
+  &__choice--radio::before {
+    border-radius: 50%;
+  }
+
+  &__item:hover &__choice::before,
+  &__item:focus &__choice::before {
+    border-color: @green;
+  }
+
+  &__item:active &__choice::before {
+    border-color: #c7c7c7;
+  }
+
+  &__hidden:checked + &__choice::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    display: block;
+    width: 33px;
+    height: 22px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__hidden:checked + &__choice--radio::after {
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: @green;
+    border-radius: 50%;
+  }
+
+  &__label {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+    color: @main;
+    background-color: @light;
+  }
+
+  &__customer-info {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 300px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: "Open Sans", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: @minor;
+    border: none;
+    border-bottom: 2px solid @main;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: @green;
+      outline: none; /*Есть ли необходимость убирать?*/
+    }
+  }
+
+  &__customer-info--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &__customer-info--email {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &__customer-info--comment {
+    margin-top: 24px;
+    padding: 15px;
+    border: 2px solid @minor;
+  }
+
+  &__footnote {
+    display: block;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: @minor;
+
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

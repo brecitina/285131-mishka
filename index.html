@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="pade-header">
-      <div class="pade-header__logo logo">
-        <img src="http://placehold.it/90x40" width="90" height="40" alt="Лого Мишка">
-      </div>
-      <nav class="main-nav  main-nav--closed">
-        <button class="main-nav__button " type="button">Открыть меню</button>
+  <body class="page">
+    <header class="page-header">
+      <a class="page-header__logo  logo">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Мишка">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__button text-hidden" type="button" title="Открыть меню">Открыть меню</button>
         <ul class="main-nav__list  main-nav__wrapper">
           <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="knitting.html">Вязание на заказ</a></li>
@@ -20,8 +21,8 @@
       </nav>
     </header>
     <main>
-      <section class="pade-title  page-title--index">
-        <h1 class="pade-title__wrapper">Милые штуки ручной работы для дома</h1>
+      <section class="page-title  page-title--index">
+        <h1 class="page-title__wrapper">Милые штуки ручной работы для дома</h1>
       </section>
       <section class="page-promo">
         <ul class="page-promo__wrapper">
@@ -38,19 +39,19 @@
           <p class="week-popular__discr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="week-popular__table">
             <tr>
-              <td class="week-popular__parameter">Цвет:</td>
-              <td class="week-popular_value">«Тиффани»/серый</td>
+              <td class="week-popular__cell">Цвет:</td>
+              <td class="week-popular__cell">«Тиффани»/серый</td>
             </tr>
             <tr>
-              <td class="week-popular__parameter">Диаметр:</td>
-              <td class="week-popular_value">25 см</td>
+              <td class="week-popular__cell">Диаметр:</td>
+              <td class="week-popular__cell">25 см</td>
             </tr>
             <tr>
-              <td class="week-popular__parameter">Высота:</td>
-              <td class="week-popular_value">15 см</td>
+              <td class="week-popular__cell">Высота:</td>
+              <td class="week-popular__cell">15 см</td>
             </tr>
           </table>
-          <img class="week-popular__review" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+          <img class="week-popular__review" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           <div class="week-popular__price">Цена: 990 руб.</div>
           <a class="btn  js-buy"  href="form.html" title="Заказать вязаную корзинку">Заказать</a>
         </div>
@@ -78,24 +79,28 @@
               <span class="review__subtitle">@misssssiskras</span>
             </cite>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Предыдущий отзыв</button>
+          <button class="reviews__btn  reviews__btn--prev text-hidden" type="button">Предыдущий отзыв</button>
+          <button class="reviews__btn  reviews__btn--next text-hidden" type="button">Предыдущий отзыв</button>
           <a class="btn" href="#" title="Написать свой отзыв">Написать</a>
         </div>
       </section>
       <section class="charter  contacts">
         <div class="charter__wrapper">
-          <h3 class="charter__title--contacts">Контакты</h3>
-          <dl class="contacts__list">
-            <dt class="contacts__item">e-mail:</dt>
-            <dd class="contacts__discr"><a href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
-            <dt class="contacts__item">адрес:</dt>
-            <dd class="contacts__discr">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</dd>
-          </dl>
+          <h3 class="charter__title  charter__title--contacts">Контакты</h3>
+          <table class="contacts__table">
+            <tr>
+              <td class="contacts__cell  contacts__cell--item">e-mail:</td>
+              <td class="contacts__cell  contacts__cell--email"><a href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+            </tr>
+            <tr>
+              <td class="contacts__cell  contacts__cell--item">адрес:</td>
+              <td class="contacts__cell  contacts__cell--adress">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            </tr>
+          </table>
         </div>
       </section>
-      <section class="charter  map">
-        <iframe class="map__googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6169192119512!2d30.323051112419144!3d59.938498591832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1488700873209" height="458" style="border:0" allowfullscreen></iframe>
+      <section  class="charter  map">
+        <div class="map__default"></div>
       </section>
       <div class="charter  feedback">
         <div class="charter__wrapper">
@@ -106,21 +111,21 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <ul class="page-footer__social  social-links">
-          <li class="social-links__item"><a class="sosial-link  social-link--inst" href="#">Инстаграм</a></li>
-          <li class="social-links__item"><a class="sosial-link  social-link--fb" href="#">Фэйсбук</a></li>
-          <li class="social-links__item"><a class="sosial-link  social-link--tw" href="#">Твиттер</a></li>
+          <li class="social-links__item"><a class="social-link  social-link--inst text-hidden" href="#">Инстаграм</a></li>
+          <li class="social-links__item"><a class="social-link  social-link--fb text-hidden" href="#">Фэйсбук</a></li>
+          <li class="social-links__item"><a class="social-link  social-link--tw text-hidden" href="#">Твиттер</a></li>
         </ul>
-        <div class="page-footer__copyright">
+        <a class="page-footer__copyright" href="https://htmlacademy.ru">
           Разработано
-          <a class="page-footer__cooryright-logo" href="https://htmlacademy.ru">HTML Academy</a>
-        </div>
+          <span class="page-footer__cooryright-logo text-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
-    <div class="modal-content charter">
-      <div class="charter__wrapper">
-        <h2 class="charter__title  charter__title--case-upper">Добавить в корзину</h2>
+    <div class="modal-content">
+      <div class="modal-content__wrapper">
+        <h2 class="modal-content__title">Добавить в корзину</h2>
         <form class="form-sizes" action="https://echo.htmlacademy.ru/" method="POST" >
-          <span class="form-sizes__title">Выберите размер:</span>
+          <p class="form-sizes__title">Выберите размер:</p>
           <ul class="form-sizes__list">
             <li class="form-sizes__item">
               <input class="form-sizes__value" id="size-s" type="checkbox" name="product-size" value="S" checked>

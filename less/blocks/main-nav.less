@@ -1,0 +1,28 @@
+.main-nav {
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: @main;
+    background-color: @light;
+  }
+
+  &__item:hover a[href],
+  &__item:focus a[href] {
+    opacity: 0.6;
+  }
+
+  &__item:active a[href] {
+    opacity: 0.3;
+  }
+}

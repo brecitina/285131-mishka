@@ -1,0 +1,46 @@
+.contacts {
+
+  &__table {
+    margin: 15px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    color: @minor;
+    background-color: @light;
+    border-collapse: collapse;
+  }
+
+  &__cell {
+    padding: 15px 0;
+    vertical-align: top;
+  }
+
+  &__cell--item {
+    min-width: 70px;
+    padding-right: 7px;
+  }
+
+  &__cell--email a {
+    color: @minor;
+    background-color: @light;
+    box-shadow: 0 2px 0 @light, 0 3px 0 @green;
+  }
+
+  &__cell--email a:hover,
+  &__cell--email a:focus {
+    color: @green-sec;
+    background-color: @light;
+    box-shadow: 0 2px 0 @light, 0 3px 0 @green-sec;
+  }
+
+  &__cell--email a:active {
+    color: @green-sec;
+    background-color: @light;
+    box-shadow: 0 2px 0 @light, 0 3px 0 @green-sec;
+    opacity: 0.3;
+  }
+
+  &__cell--adress {
+    padding-right: 45px;
+  }
+}
