@@ -26,7 +26,6 @@
     font-size: 17px;
     line-height: 24px;
     color: @main;
-    background-color: @light;
   }
 
   &__item:hover a[href],
@@ -44,10 +43,38 @@
 
     &__wrapper {
       .container();
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 115px;
     }
 
     &__button {
       display: none;
+    }
+
+    &__list {
+      position: absolute;
+      top: 105px;
+      left: 50px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .main-nav {
+
+    &__wrapper {
+      justify-content: space-between;
+      padding-left: 0;
+    }
+
+    &__list {
+      position: static;
+      width: 415px;
+    }
+
+    &__user {
+      width: 350px;
     }
   }
 }
