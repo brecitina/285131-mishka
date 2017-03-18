@@ -1,0 +1,30 @@
+.page-header {
+  min-height: 80px;
+
+  &__logo {
+    display: block;
+    width: 86px;
+    height: 35px;
+    outline: 1px solid red;
+  }
+}
+
+@media @tablet-widths {
+  .page-header {
+    min-height: 80px;
+
+    &__logo {
+      width: 114px;
+      height: 48px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+    &__logo {
+      width: 150px;
+      height: 73px;
+    }
+  }
+}
