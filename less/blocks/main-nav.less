@@ -1,7 +1,19 @@
 .main-nav {
-  &__list {
+  position: relative;
+  width: auto;
+
+  &__button {
+    position: absolute;
+    top: -50px;
+    right: 9.375%;
+  }
+
+  &__list,
+  &__user {
+    margin: 0;
     padding: 0;
     list-style: none;
+    outline: 1px solid green;
   }
 
   &__item {
@@ -24,5 +36,18 @@
 
   &__item:active a[href] {
     opacity: 0.3;
+  }
+}
+
+@media @tablet-widths {
+  .main-nav {
+
+    &__wrapper {
+      .container();
+    }
+
+    &__button {
+      display: none;
+    }
   }
 }

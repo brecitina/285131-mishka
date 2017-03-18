@@ -1,21 +1,30 @@
 .page-header {
   min-height: 80px;
+  color: @light;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 
   &__logo {
     display: block;
     width: 86px;
     height: 35px;
+    margin: 21px auto;
     outline: 1px solid red;
   }
 }
 
 @media @tablet-widths {
   .page-header {
+    position: relative;
     min-height: 80px;
 
     &__logo {
+      position: absolute;
+      left: 50px;
+      top: 22px;
       width: 114px;
       height: 48px;
+      margin: 0;
     }
   }
 }
@@ -23,6 +32,9 @@
 @media @desktop-widths {
   .page-header {
     &__logo {
+      top: 9px;
+      left: 50%;
+      margin-left: -150px / 2;
       width: 150px;
       height: 73px;
     }
