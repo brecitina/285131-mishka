@@ -2,17 +2,24 @@
   color: @minor;
   background-color: @light;
 
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   &__discr {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    max-width: 290px;
+    margin: 24px auto;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
   }
 
   &__table {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    width: 100%;
+    max-width: 290px;
+    margin: 24px auto;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
@@ -22,9 +29,22 @@
   &__cell {
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-right: 30px;
+    padding-right: 28px;
     padding-left: 0;
     border-bottom: 1px solid @gray;
+  }
+
+  &__review {
+    min-width: 260px;
+    min-height: 315px;
+    margin: 0 auto;
+  }
+
+  &__prise-block {
+    width: 100%;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__price {
