@@ -6,11 +6,13 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin: 24px 0;
+    outline: 1px solid pink;
   }
 
   &__discr {
     max-width: 290px;
-    margin: 24px auto;
+    margin: 0 auto 24px;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
@@ -19,7 +21,7 @@
   &__table {
     width: 100%;
     max-width: 290px;
-    margin: 24px auto;
+    margin: 0 auto 24px;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
@@ -40,7 +42,7 @@
     margin: 0 auto;
   }
 
-  &__prise-block {
+  &__price-block {
     width: 100%;
     max-width: 290px;
     margin-left: auto;
@@ -54,5 +56,63 @@
     font-size: 17px;
     line-height: 24px;
     text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .week-popular {
+
+    &__layout {
+      position: relative;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 50px 0;
+      padding: 0;
+      padding-right: 378px;
+    }
+
+    &__discr {
+      margin-bottom: 48px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__review {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 335px; /*картинка стоит мобильная*/
+      height: 405px;
+    }
+
+    &__price {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .week-popular {
+
+    &__layout {
+      margin-left: 175px;
+      padding-right: 583px;
+    }
+
+    &__discr {
+      margin-bottom: 65px;
+    }
+
+    &__table {
+      margin-bottom: 88px;
+    }
+
+    &__review {
+      width: 525px; /*картинка стоит мобильная*/
+      height: 636px;
+    }
   }
 }
