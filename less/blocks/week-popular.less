@@ -1,6 +1,7 @@
 .week-popular {
   color: @minor;
   background-color: @light;
+  overflow: hidden;
 
   &__layout {
     display: flex;
@@ -74,17 +75,30 @@
     }
 
     &__discr {
-      margin-bottom: 48px;
+      width: 290px;
+      margin: 0 0 48px 0;
       font-size: 17px;
       line-height: 30px;
     }
 
+    &__table {
+      width: 290px;
+      margin: 0 0 24px;
+    }
+
     &__review {
       position: absolute;
-      right: 0;
+      left: 50%;
       bottom: 0;
-      width: 335px; /*картинка стоит мобильная*/
-      height: 405px;
+      width: 50%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    &__price-block {
+      width: 290px;
+      margin: 0;
+
     }
 
     &__price {
@@ -98,8 +112,8 @@
   .week-popular {
 
     &__layout {
-      margin-left: 175px;
-      padding-right: 583px;
+      padding-left: 175px;
+      padding-right: 50%;
     }
 
     &__discr {
