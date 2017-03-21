@@ -1,8 +1,8 @@
 .review {
   margin: 0;
+
   padding: 30px 0;
   color: @minor;
-  background-color: @light;
 
   &__text {
     margin: 0;
@@ -22,10 +22,25 @@
   }
 
   &__subtitle {
+    display: block;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 30px;
     color: @minor;
+  }
+}
+
+@media @tablet-widths {
+  .review {
+    margin-top: 55px;
+    padding: 0;
+  }
+}
+
+@media @desktop-widths {
+  .review {
+    margin-left: 175px;
+    padding: 0;
   }
 }
