@@ -17,6 +17,7 @@
   }
 
   &__title--contacts {
+    margin-bottom: 15px;
     font-size: 18px;
   }
 
@@ -41,10 +42,28 @@
     &__title,
     &__title--contacts {
       position: relative;
-      padding-right: 125px;
+      padding-right: 225px;
       font-size: 43px;
       line-height: 50px;
       z-index: 1;
+    }
+
+    &__title--contacts {
+      position: relative;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__title--contacts::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 50px;
+      height: 85px;
+      background-image: url('../img/icon-flag.svg');
+      background-repeat: no-repeat;
     }
 
     &__title--making {
@@ -67,12 +86,18 @@
 
 @media @desktop-widths {
   .charter {
+    margin-bottom: 65px;
 
     &__title,
     &__title--contacts {
       padding: 0 0 0 175px;
       font-size: 53px;
       line-height: 57px;
+    }
+
+    &__title--contacts::after {
+      left: 65px;
+      top: 0;
     }
 
     &__subtitle {

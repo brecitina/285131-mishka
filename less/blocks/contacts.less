@@ -1,12 +1,13 @@
 .contacts {
+  background-color: @light;
 
   &__table {
-    margin: 15px 0;
+    margin: 0;
+    margin-bottom: 20px;
     font-weight: 400;
     font-size: 15px;
     line-height: 30px;
     color: @minor;
-    background-color: @light;
     border-collapse: collapse;
   }
 
@@ -22,25 +23,99 @@
 
   &__cell--email a {
     color: @minor;
-    background-color: @light;
     box-shadow: 0 2px 0 @light, 0 3px 0 @green;
   }
 
   &__cell--email a:hover,
   &__cell--email a:focus {
     color: @green-sec;
-    background-color: @light;
     box-shadow: 0 2px 0 @light, 0 3px 0 @green-sec;
   }
 
   &__cell--email a:active {
     color: @green-sec;
-    background-color: @light;
     box-shadow: 0 2px 0 @light, 0 3px 0 @green-sec;
     opacity: 0.3;
   }
 
-  &__cell--adress {
-    padding-right: 45px;
+  &__cell--adress span {
+    white-space: nowrap;
+  }
+
+  &__map {
+    height: 457px;
+  }
+
+  &__map-default {
+    height: 457px;
+    background-color: @gray;
+    background-image:
+      url("../img/icon-map-pin.svg"),
+      url("../img/map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__btn {
+    margin: 40px auto;
+  }
+}
+
+@media @tablet-widths {
+  .contacts {
+
+    &__table tbody {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+
+    &__table tr {
+      display: block;
+      width: 50%;
+    }
+
+    &__btn {
+      width: 226px;
+      margin: 55px auto;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .contacts {
+    position: relative;
+    padding-top: 65px;
+    margin-bottom: 105px;
+
+    &__table {
+      margin-bottom: 55px;
+    }
+
+    &__table tbody {
+      margin-bottom: 0;
+      padding-left: 175px;
+      padding-right: 560px;
+    }
+
+    &__table tr {
+      width: 100%;
+    }
+
+    &__btn {
+      margin: 0;
+      margin-left: 175px;
+    }
+
+    &__map {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 525px;
+    }
+
+    &__map-default {
+      width: 525px;
+    }
   }
 }
