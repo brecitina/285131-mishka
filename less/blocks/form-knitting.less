@@ -1,8 +1,7 @@
 .form-knitting {
-  padding-top: 23px;
 
   &__discr {
-    margin: 0;
+    .container();
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
@@ -11,24 +10,49 @@
   }
 
   &__section {
-    margin: 32px 0;
-    padding: 0;
+    .container();
+    display: flex;
+    flex-direction: column;
+    margin-top: 23px;
+    margin-bottom: 23px;
     border: none;
-    border-top: 1px solid @green;
+    /*border-top: 1px solid @green;*/
+    outline: 1px solid deeppink;
+  }
+
+  &__block-legend {
+    margin-bottom: 21px;
+  }
+
+  &__block-legend::before{
+    position: relative;
+    top: 15px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: @green;
+    z-index: 1;
   }
 
   &__legend {
-    min-width: 60px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 62px;
+    max-width: 200px;
+    margin: 0;
+    padding-right: 24px;
     font-weight: 700;
     font-size: 17px;
     line-height: 17px;
     color: @green;
     background-color: @light;
+    z-index: 2;
   }
 
   &__list {
     margin: 0;
-    margin-top: 25px;
     padding: 0;
     list-style: none;
   }
@@ -56,7 +80,6 @@
     font-size: 17px;
     line-height: 18px;
     color: @main;
-    background-color: @light;
     cursor: pointer;
   }
 
@@ -125,6 +148,7 @@
   &__customer-info {
     display: inline-block;
     box-sizing: border-box;
+    width: 100%;
     min-width: 260px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -134,6 +158,7 @@
     line-height: 18px;
     vertical-align: middle;
     color: @minor;
+    background-color: transparent;
     border: none;
     border-bottom: 2px solid @main;
 
@@ -146,12 +171,14 @@
   }
 
   &__customer-info--phone {
+    padding-right: 40px;
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
     background-position: right;
   }
 
   &__customer-info--email {
+    padding-right: 40px;
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
     background-position: right;
@@ -163,6 +190,11 @@
     border: 2px solid @minor;
   }
 
+  &__footer {
+    .container();
+    outline: 1px solid red;
+  }
+
   &__footnote {
     display: block;
     margin-bottom: 30px;
@@ -170,10 +202,65 @@
     font-size: 14px;
     line-height: 16px;
     color: @minor;
-
   }
 
   &__btn {
     width: 100%;
+  }
+}
+
+@media @tablet-widths {
+  .form-knitting {
+
+    &__discr {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__container:nth-child(2n+1) {
+      background-color: @gray;
+    }
+
+    &__section {
+      flex-direction: row;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__block-legend::before {
+      content: none;
+    }
+
+    &__legend {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      width: 167px;
+      background-color: transparent;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      min-width: 240px;
+    }
+
+    &__choice {
+      font-size: 19px;
+      line-height: 19px;
+    }
+
+    &__label {
+      font-size: 19px;
+      line-height: 19px;
+    }
+
+    &__customer-info {
+      font-size: 19px;
+      line-height: 19px;
+    }
   }
 }
