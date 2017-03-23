@@ -1,28 +1,98 @@
 .video {
-  margin: 30px 0;
+  margin-bottom: 58px;
   color: @main;
-  background-color: @light;
-  border: 1px solid #cecece;
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 6px 10px 0 @main01;
+  &__layout {
+    border: 1px solid #cecece;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 10px 0 @main01;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 @main01;
+    }
   }
 
   &__container {
+    height: 150px;
     border-top: 1px solid #cecece;
     border-bottom: 1px solid #cecece;
   }
 
-  &:active {
-    box-shadow: 0 3px 5px 0 @main01;
+  &__wrapper {
+    margin: 32px 12.692%;
+    outline: 1px solid green;
   }
 
   &__discr {
+    margin: 0;
+    margin-bottom: 29px;
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
     color: @minor;
     background-color: @light;
+  }
+}
+
+@media @tablet-widths {
+  .video {
+    margin-bottom: 63px;
+
+    &__layout {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__container {
+      order: -1;
+      height: 455px;
+      border-top: none;
+    }
+
+    &__wrapper {
+      margin-top: 10px;
+      margin-bottom: 45px;
+      margin-left: 6.288%;
+      margin-right: 6.288%;
+    }
+
+    &__discr {
+      margin-bottom: 40px;
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .video {
+    margin-bottom: 105px;
+
+    &__layout {
+      position: relative;
+      box-sizing: border-box;
+      min-height: 455px;
+      padding-left: 700px;
+      outline: 1px solid pink;
+    }
+
+    &__container {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 680px;
+      height: 455px;
+      border-bottom: none;
+      border-right: 1px solid #cecece;
+    }
+
+    &__wrapper {
+      margin-left: 61px;
+      margin-right: 58px;
+    }
   }
 }
