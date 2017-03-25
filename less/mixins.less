@@ -1,4 +1,4 @@
-.states() {
+.hover-active() {
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -6,5 +6,78 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.container() {
+  width: auto;
+  margin: 0 9.375%;
+
+  @media @tablet-widths {
+    width: auto;
+    margin: 0 50px;
+  }
+
+  @media @desktop-widths {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+/*Responsive utilities*/
+.visible-mobile(@display: block) {
+  display: @display;
+
+  @media @tablet-widths {
+    display: none;
+  }
+}
+
+.visible-tablet(@display: block) {
+  display: none;
+
+  @media @tablet-widths {
+    display: @display;
+  }
+
+  @media @desktop-widths {
+    display: none;
+  }
+
+}
+
+.visible-desktop(@display: block) {
+  display: none;
+
+  @media @desktop-widths {
+    display: @display;
+  }
+}
+
+.hidden-mobile(@display: block) {
+  display: none;
+
+  @media @tablet-widths {
+    display: @display;
+  }
+}
+
+.hidden-tablet(@display: block) {
+  display: @display;
+
+  @media @tablet-widths {
+    display: none;
+  }
+
+  @media @desktop-widths {
+    display: @display;
+  }
+}
+
+.hidden-desktop(@display: block) {
+  display: @display;
+
+  @media @desktop-widths {
+    display: none;
   }
 }

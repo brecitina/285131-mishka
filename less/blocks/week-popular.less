@@ -1,18 +1,28 @@
 .week-popular {
   color: @minor;
   background-color: @light;
+  overflow: hidden;
+
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 24px 0;
+    outline: 1px solid pink;
+  }
 
   &__discr {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    max-width: 330px;
+    margin: 0 auto 24px;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
   }
 
   &__table {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto 24px;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
@@ -22,9 +32,22 @@
   &__cell {
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-right: 30px;
+    padding-right: 28px;
     padding-left: 0;
     border-bottom: 1px solid @gray;
+  }
+
+  &__review {
+    min-width: 260px;
+    min-height: 315px;
+    margin: 0 auto;
+  }
+
+  &__price-block {
+    width: 100%;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__price {
@@ -34,5 +57,76 @@
     font-size: 17px;
     line-height: 24px;
     text-align: center;
+  }
+}
+
+@media @tablet-widths {
+  .week-popular {
+
+    &__layout {
+      position: relative;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 50px 0;
+      padding: 0;
+      padding-right: 378px;
+    }
+
+    &__discr {
+      width: 290px;
+      margin: 0 0 48px 0;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__table {
+      width: 290px;
+      margin: 0 0 24px;
+    }
+
+    &__review {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 50%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    &__price-block {
+      width: 290px;
+      margin: 0;
+
+    }
+
+    &__price {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .week-popular {
+
+    &__layout {
+      padding-left: 175px;
+      padding-right: 50%;
+    }
+
+    &__discr {
+      margin-bottom: 65px;
+    }
+
+    &__table {
+      margin-bottom: 88px;
+    }
+
+    &__review {
+      width: 525px; /*картинка стоит мобильная*/
+      height: 636px;
+    }
   }
 }

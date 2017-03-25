@@ -1,20 +1,24 @@
 .page-footer {
-  padding: 24px 0;
   color: @main;
   background-color: @gray;
 
-  &__social {
-    padding: 0;
-    list-style: none;
+  &__wrapper {
+    .container();
+  }
+
+  &__logo {
+    .hidden-mobile();
   }
 
   &__copyright {
     display: block;
+    padding: 30px 0;
     font-weight: 700;
     font-size: 19px;
     line-height: 18px;
     text-align: center;
     color: @main;
+    border-top: 1px solid #e5e5e5;
     background-color: @gray;
   }
 
@@ -31,5 +35,29 @@
 
   &__cooryright-logo:active {
     opacity: 0.3;
+  }
+}
+
+@media @tablet-widths {
+  .page-footer {
+    position: relative;
+
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 143px;
+      }
+
+      &__social {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &__copyright {
+        border: none;
+      }
   }
 }

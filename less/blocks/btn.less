@@ -1,5 +1,9 @@
 .btn {
   display: block;
+  box-sizing: border-box;
+  max-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 9px;
   padding-bottom: 9px;
   font-weight: 700;
@@ -13,9 +17,15 @@
 
   &--color-tiffany {
     width: 100%;
+    max-width: 100%;
     color: @light;
     background-color: @green;
     border-color: @green;
+  }
+
+  &--video {
+    width: 100%;
+    max-width: 100%;
   }
 
   &:hover,
@@ -31,7 +41,7 @@
   }
 
   &--size-value {
-    width: 78px;
+    width: 100%;
     border-color: @gray;
   }
 
@@ -39,7 +49,7 @@
   &--size-value:focus {
     color: @minor;
     background-color: @light;
-    border-color: fade(@minor, 10%);
+    border-color: fade(@minor, 30%);
   }
 
   &--size-value:checked,
@@ -47,5 +57,12 @@
     color: @minor;
     background-color: @light;
     border-color: @green;
+  }
+}
+
+@media @tablet-widths {
+  .btn {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }

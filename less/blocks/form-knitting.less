@@ -1,6 +1,7 @@
 .form-knitting {
 
   &__discr {
+    .container();
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
@@ -9,24 +10,49 @@
   }
 
   &__section {
-    margin: 32px 0;
-    padding: 0;
+    .container();
+    display: flex;
+    flex-direction: column;
+    margin-top: 23px;
+    margin-bottom: 23px;
     border: none;
-    border-top: 1px solid @green;
+    /*border-top: 1px solid @green;*/
+    outline: 1px solid deeppink;
+  }
+
+  &__block-legend {
+    margin-bottom: 20px;
+  }
+
+  &__block-legend::before{
+    position: relative;
+    top: 15px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: @green;
+    z-index: 1;
   }
 
   &__legend {
-    min-width: 60px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 62px;
+    max-width: 200px;
+    margin: 0;
+    padding-right: 24px;
     font-weight: 700;
     font-size: 17px;
     line-height: 17px;
     color: @green;
     background-color: @light;
+    z-index: 2;
   }
 
   &__list {
     margin: 0;
-    margin-top: 25px;
     padding: 0;
     list-style: none;
   }
@@ -54,7 +80,7 @@
     font-size: 17px;
     line-height: 18px;
     color: @main;
-    background-color: @light;
+    cursor: pointer;
   }
 
   &__choice--radio {
@@ -122,7 +148,8 @@
   &__customer-info {
     display: inline-block;
     box-sizing: border-box;
-    min-width: 300px;
+    width: 100%;
+    min-width: 260px;
     padding-top: 16px;
     padding-bottom: 16px;
     font-family: "Open Sans", "Arial", "sans-serif";
@@ -131,6 +158,7 @@
     line-height: 18px;
     vertical-align: middle;
     color: @minor;
+    background-color: transparent;
     border: none;
     border-bottom: 2px solid @main;
 
@@ -143,21 +171,28 @@
   }
 
   &__customer-info--phone {
+    padding-right: 40px;
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 5px center;
   }
 
   &__customer-info--email {
+    padding-right: 40px;
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 5px center;
   }
 
   &__customer-info--comment {
-    margin-top: 24px;
     padding: 15px;
     border: 2px solid @minor;
+  }
+
+  &__footer {
+    .container();
+    justify-content: space-between;
+    outline: 1px solid red;
   }
 
   &__footnote {
@@ -167,10 +202,127 @@
     font-size: 14px;
     line-height: 16px;
     color: @minor;
-
   }
 
   &__btn {
     width: 100%;
+  }
+}
+
+@media @tablet-widths {
+  .form-knitting {
+
+    &__discr {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__container:nth-child(2n+1) {
+      background-color: @gray;
+    }
+
+    &__section {
+      flex-direction: row;
+    }
+
+    &__block-legend::before {
+      content: none;
+    }
+
+    &__legend {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      width: 167px;
+      background-color: transparent;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      min-width: 240px;
+    }
+
+    &__item--info {
+      width: 100%;
+    }
+
+    &__choice {
+      font-size: 19px;
+      line-height: 19px;
+    }
+
+    &__label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 19px;
+      line-height: 19px;
+    }
+
+    &__customer-info {
+      padding-left: 17px;
+      font-size: 19px;
+    }
+
+    &__item--info &__customer-info {
+      margin-left: 26px;
+    }
+
+    &__customer-info--phone,
+    &__customer-info--email {
+      background-position: right 22px center;
+    }
+
+    &__footer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__footnote {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__btn {
+      order: -1;
+      width: 230px;
+      margin: 0;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .form-knitting {
+
+    &__discr {
+      width: 700px;
+    }
+
+    &__legend {
+      width: 175px;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    &__choice--radio,
+    &__item--info,
+    &__customer-info--phone,
+    &__customer-info--email,
+    &__customer-info--comment {
+      width: 700px;
+    } /*батарея мне не нравится*/
+
+    &__footer {
+      width: 700px;
+    }
   }
 }

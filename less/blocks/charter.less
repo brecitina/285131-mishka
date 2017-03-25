@@ -1,7 +1,12 @@
 .charter {
-  margin-top: 33px;
   margin-bottom: 35px;
   outline: 1px solid blue;
+  background-color: @light;
+
+  &__wrapper {
+    .container();
+    outline: 1px solid red;
+  }
 
   &__title {
     margin: 0;
@@ -9,16 +14,24 @@
     font-size: 25px;
     line-height: 30px;
     color: @main;
-    background-color: @light;
   }
 
   &__title--contacts {
+    margin-bottom: 15px;
     font-size: 18px;
   }
 
   &__title--making {
+    margin: 0 12.692%;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 57px;
+    padding-right: 0;
     font-size: 17px;
     line-height: 24px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
   }
 
   &__subtitle {
@@ -28,6 +41,92 @@
     text-transform: uppercase;
     color: @green;
     white-space: nowrap;
-    background-color: @light;
+  }
+}
+
+@media @tablet-widths {
+  .charter {
+
+    &__title,
+    &__title--contacts {
+      position: relative;
+      padding-right: 225px;
+      font-size: 43px;
+      line-height: 50px;
+      z-index: 1;
+    }
+
+    &__title--contacts {
+      position: relative;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__title--contacts::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 50px;
+      height: 85px;
+      background-image: url('../img/icon-flag.svg');
+      background-repeat: no-repeat;
+    }
+
+    &__title--making {
+      margin-left: 6.288%;
+      margin-right: 6.288%;
+      padding-left: 65px;
+      padding-right: 0;
+      font-size: 20px;
+    }
+
+    &__subtitle {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 125px;
+      font-size: 17px;
+      line-height: 17px;
+      text-align: center;
+      white-space: normal;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .charter {
+    margin-bottom: 65px;
+
+    &__title,
+    &__title--contacts {
+      padding: 0 0 0 175px;
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__title--contacts::after {
+      left: 65px;
+      top: 0;
+    }
+
+    &__title--making {
+      margin-left: 61px;
+      margin-right: 58px;
+      margin-top: 45px;
+      margin-bottom: 38px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 47px;
+      font-size: 20px;
+      line-height: 24px;
+      background-position: 0 0;
+    }
+
+    &__subtitle {
+      left: 25px;
+    }
   }
 }

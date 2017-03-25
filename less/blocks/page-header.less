@@ -1,0 +1,46 @@
+.page-header {
+  min-height: 80px;
+  color: @light;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+
+  &__logo {
+    display: block;
+    width: 86px;
+    height: 35px;
+    margin: 21px auto;
+    outline: 1px solid red;
+  }
+}
+
+@media @tablet-widths {
+  .page-header {
+    position: relative;
+    min-height: 88px;
+    border-top: none;
+    border-bottom: 1px solid @main01;
+
+    &__logo {
+      position: absolute;
+      left: 50px;
+      top: 22px;
+      width: 114px;
+      height: 46px;
+      margin: 0;
+      z-index: 10;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+
+    &__logo {
+      top: 9px;
+      left: 50%;
+      margin-left: -150px / 2;
+      width: 150px;
+      height: 73px;
+    }
+  }
+}

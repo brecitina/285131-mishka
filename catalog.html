@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка: Каталог товаров</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
@@ -11,13 +12,22 @@
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Мишка">
       </a>
       <nav class="main-nav  main-nav--closed">
-        <button class="main-nav__button text-hidden" type="button" title="Открыть меню">Открыть меню</button>
-        <ul class="main-nav__list  main-nav__wrapper">
-          <li class="main-nav__item"><a class="main-nav__link">Каталог товаров</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="knitting.html">Вязание на заказ</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: <span>пока пуста</span></a></li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <button class="main-nav__button text-hidden" type="button" title="Открыть меню">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link">Каталог товаров</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="knitting.html">Вязание на заказ</a></li>
+          </ul>
+          <ul class="main-nav__user">
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: <span>пока пуста</span></a></li>
+          </ul>
+          <ul class="main-nav__addition">
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--small" href="#">Новые поступления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--small" href="#">Распродажа</a></li>
+          </ul>
+          <div class="main-nav__label">Бесплатная доставка по России</div>
+        </div>
       </nav>
     </header>
 
@@ -26,9 +36,9 @@
         <h1 class="page-title__wrapper">Каталог товаров</h1>
       </section>
       <section class="charter catalog">
-        <div class="charter__wrapper">
-          <article class="catalog-item">
-            <a class="catalog-item__link" href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик"></a>
+        <div class="charter__wrapper catalog__layout">
+          <article class="catalog__one  catalog-item">
+            <a class="catalog-item__link" href="#"><img src="img/photo-1-mobile@1x.jpg" width="258" height="194" alt="Зайчик-попрыгайчик"></a>
             <div class="catalog-item__wrapper">
               <a class="catalog-item__link" href="#">
                 <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
@@ -37,7 +47,7 @@
               <a class="catalog-item__price  js-buy" href="form.html" title="Купить">1200 руб.</a>
             </div>
           </article>
-          <article class="catalog-item">
+          <article class="catalog__one  catalog-item">
             <a class="catalog-item__link" href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья"></a>
             <div class="catalog-item__wrapper">
               <a class="catalog-item__link" href="#">
@@ -47,7 +57,7 @@
               <a class="catalog-item__price  js-buy" href="form.html" title="Купить">690 руб.</a>
             </div>
           </article>
-          <article class="catalog-item">
+          <article class="catalog__one  catalog-item">
             <a class="catalog-item__link" href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек"></a>
             <div class="catalog-item__wrapper">
               <a class="catalog-item__link" href="#">
@@ -60,12 +70,12 @@
         </div>
       </section>
       <article class="charter  video">
-        <div class="charter__wrapper">
+        <div class="charter__wrapper  video__layout">
           <h3 class="charter__title  charter__title--making">Процесс производства</h3>
-          <iframe width="260" height="150" src="https://www.youtube.com/embed/qii2w9O6r_0?rel=0" allowfullscreen></iframe>
+          <div class="video__container"><iframe width="260" height="150" src="https://www.youtube.com/embed/qii2w9O6r_0?rel=0" allowfullscreen></iframe></div>
           <div class="video__wrapper">
             <p class="video__discr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="btn js-buy" href="form.html" title="Заказать этот товар">Сделать заказ</a>
+            <a class="btn btn--video js-buy" href="form.html" title="Заказать этот товар">Сделать заказ</a>
           </div>
         </div>
       </article>
@@ -73,6 +83,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Мишка">
+        </a>
         <ul class="page-footer__social  social-links">
           <li class="social-links__item"><a class="social-link  social-link--inst text-hidden" href="#">Инстаграм</a></li>
           <li class="social-links__item"><a class="social-link  social-link--fb text-hidden" href="#">Фэйсбук</a></li>

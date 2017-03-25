@@ -1,7 +1,27 @@
 .main-nav {
-  &__list {
+  width: auto;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__button {
+    .visible-mobile();
+    position: absolute;
+    top: -50px;
+    right: 9.375%;
+  }
+
+  &__list,
+  &__user {
+    margin: 0;
     padding: 0;
     list-style: none;
+    outline: 1px solid green;
+  }
+
+  &__addition {
+    .visible-desktop();
   }
 
   &__item {
@@ -14,7 +34,11 @@
     font-size: 17px;
     line-height: 24px;
     color: @main;
-    background-color: @light;
+  }
+
+  &__link--small {
+    font-size: 15px;
+    line-height: 24px
   }
 
   &__item:hover a[href],
@@ -24,5 +48,71 @@
 
   &__item:active a[href] {
     opacity: 0.3;
+  }
+
+  &__label {
+  .hidden-mobile();
+  }
+}
+
+@media @tablet-widths {
+  .main-nav {
+
+    &__wrapper {
+      .container();
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 115px;
+      outline: 1px solid pink;
+    }
+
+    &__list {
+      position: absolute;
+      top: 105px;
+      left: 0;
+      z-index: 10;
+    }
+
+    &__label {
+      position: absolute;
+      right: 0;
+      top: 125px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: @minor;
+      z-index: 10;
+      outline: 1px solid green;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .main-nav {
+
+    &__wrapper {
+      justify-content: space-between;
+      padding-left: 0;
+    }
+
+    &__list {
+      position: static;
+      width: 415px;
+    }
+
+    &__user {
+      width: 350px;
+    }
+
+    &__addition {
+      position: absolute;
+      left: 0;
+      top: 125px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      z-index: 10;
+      outline: 1px solid green;
+    }
   }
 }

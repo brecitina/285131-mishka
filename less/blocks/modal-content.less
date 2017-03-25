@@ -1,9 +1,17 @@
 .modal-content {
   padding-top: 38px;
   padding-bottom: 47px;
+  border-top: 1px solid #c7c7c7;
+  box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.25);
+
+  &__wrapper {
+    width: auto;
+    margin: 0 9.375%;
+  }
 
   &__title {
     margin: 0;
+    margin-bottom: 18px;
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
@@ -11,5 +19,22 @@
     text-align: center;
     color: @main;
     background-color: @light;
+  }
+}
+
+@media @tablet-widths {
+  .modal-content {
+
+    &__title {
+      font-size: 30px;
+      line-height: 57px;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .modal-content {
+    width: 566px;
+    border: 1px solid #c6c6c6;
   }
 }

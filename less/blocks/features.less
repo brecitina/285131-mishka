@@ -1,15 +1,87 @@
 .features {
 
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0;
     padding: 0;
     list-style: none;
+    outline: 1px solid pink;
   }
 
   &__item {
+    display: block;
+    flex-basis: 255px;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+    padding-top: 60px;
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
     color: @main;
     background-color: @light;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    outline: 1px solid green;
+
+    &--flower {
+      background-image: url("../img/icon-feature-1.svg");
+    }
+
+    &--money {
+      background-image: url("../img/icon-feature-3.svg");
+    }
+
+    &--heart {
+      background-image: url("../img/icon-feature-5.svg");
+    }
+
+    &--ball {
+      background-image: url("../img/icon-feature-2.svg");
+    }
+
+    &--rocket {
+      background-image: url("../img/icon-feature-4.svg");
+    }
+
+    &--gift {
+      background-image: url("../img/icon-feature-6.svg");
+    }
+  }
+
+  &__item:nth-child(2n) {
+    order: 1;
+  }
+}
+
+@media @tablet-widths {
+  .features {
+
+    &__list {
+      max-width: 700px;
+    }
+
+    &__item {
+      padding-right: 66px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    &__item:nth-child(2n) {
+      order: 0;
+      flex-basis: 300px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .features {
+
+    &__list {
+      margin-left: 175px;
+    }
   }
 }

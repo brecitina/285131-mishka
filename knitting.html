@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка: Вязание на заказ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
@@ -11,13 +12,22 @@
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Мишка">
       </a>
       <nav class="main-nav  main-nav--closed">
-        <button class="main-nav__button text-hidden" type="button" title="Открыть меню">Открыть меню</button>
-        <ul class="main-nav__list  main-nav__wrapper">
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a class="main-nav__link">Вязание на заказ</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: <span>пока пуста</span></a></li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <button class="main-nav__button text-hidden" type="button" title="Открыть меню">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item"><a class="main-nav__link">Вязание на заказ</a></li>
+          </ul>
+          <ul class="main-nav__user">
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: <span>пока пуста</span></a></li>
+          </ul>
+          <ul class="main-nav__addition">
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--small" href="#">Новые поступления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--small" href="#">Распродажа</a></li>
+          </ul>
+          <div class="main-nav__label">Бесплатная доставка по России</div>
+        </div>
       </nav>
     </header>
 
@@ -26,11 +36,13 @@
         <h1 class="page-title__wrapper">Вязание на заказ</h1>
       </section>
       <section class="charter">
-        <div class="charter__wrapper">
-          <form class="form-knitting" method="POST"  action="https://echo.htmlacademy.ru/">
-            <p class="form-knitting__discr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-            <fieldset class="form-knitting__section">
-              <legend class="form-knitting__legend">Тип</legend>
+        <form class="form-knitting" method="POST" action="https://echo.htmlacademy.ru/">
+          <p class="form-knitting__discr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <div class="form-knitting__container">
+            <div class="form-knitting__section">
+              <div class="form-knitting__block-legend">
+                <h3 class="form-knitting__legend">Тип</h3>
+              </div>
               <ul class="form-knitting__list">
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-accesory" type="radio" name="knitting-type" value="accesory" checked>
@@ -41,9 +53,13 @@
                   <label class="form-knitting__choice  form-knitting__choice--radio" for="knitting-toy" title="Выбрать">Детская игрушка</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form-knitting__section">
-              <legend class="form-knitting__legend">Цвет</legend>
+            </div>
+          </div>
+          <div class="form-knitting__container">
+            <div class="form-knitting__section">
+              <div class="form-knitting__block-legend">
+                <h3 class="form-knitting__legend">Цвет</h3>
+              </div>
               <ul class="form-knitting__list">
                 <li class="form-knitting__item">
                   <input class="form-knitting__hidden" id="knitting-white" type="checkbox" name="knitting-color" value="white" checked>
@@ -70,46 +86,65 @@
                   <label class="form-knitting__choice" for="knitting-orange" title="Выбрать">Оранжевый</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form-knitting__section">
-              <legend class="form-knitting__legend">ФИО</legend>
+            </div>
+          </div>
+          <div class="form-knitting__container">
+            <div class="form-knitting__section">
+              <div class="form-knitting__block-legend">
+                <h3 class="form-knitting__legend">ФИО</h3>
+              </div>
               <ul class="form-knitting__list">
-                <li class="form-knitting__item">
+                <li class="form-knitting__item form-knitting__item--info">
                   <label class="form-knitting__label">Имя:
                   <input class="form-knitting__customer-info" type="text" name="customer-name" placeholder="Введите ваше имя*" required></label>
                 </li>
-                <li class="form-knitting__item">
+                <li class="form-knitting__item form-knitting__item--info">
                   <label class="form-knitting__label">Фамилия:
                   <input class="form-knitting__customer-info" type="text" name="customer-surname" placeholder="Укажите фамилию*" required></label>
                 </li>
-                <li class="form-knitting__item">
+                <li class="form-knitting__item form-knitting__item--info">
                   <label class="form-knitting__label">Отчество:
                   <input class="form-knitting__customer-info" type="text" name="customer-patronymic" placeholder="Отчество, если желаете"></label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form-knitting__section">
-              <legend class="form-knitting__legend">Тел</legend>
+            </div>
+          </div>
+          <div class="form-knitting__container">
+            <div class="form-knitting__section">
+              <div class="form-knitting__block-legend">
+                <h3 class="form-knitting__legend">Тел</h3>
+              </div>
               <input class="form-knitting__customer-info  form-knitting__customer-info--phone" type="tel" name="customer-phone" placeholder="+7 XXX XX XX*" required>
-            </fieldset>
-            <fieldset class="form-knitting__section">
-              <legend class="form-knitting__legend">E-mail</legend>
+            </div>
+            <div class="form-knitting__section">
+              <div class="form-knitting__block-legend">
+                <h3 class="form-knitting__legend">E-mail</h3>
+              </div>
               <input class="form-knitting__customer-info  form-knitting__customer-info--email" type="email" name="customer-email" placeholder="Ваш Email*" required>
-            </fieldset>
-            <fieldset class="form-knitting__section">
-              <legend class="form-knitting__legend">Доп</legend>
+            </div>
+          </div>
+          <div class="form-knitting__container">
+            <div class="form-knitting__section">
+              <div class="form-knitting__block-legend">
+                <h3 class="form-knitting__legend">Доп</h3>
+              </div>
               <textarea class="form-knitting__customer-info  form-knitting__customer-info--comment" rows="6" name="customer-comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </fieldset>
+            </div>
+          </div>
+          <div class="form-knitting__footer">
             <span class="form-knitting__footnote">*Поля обязательны для заполнения</span>
             <button class="form-knitting__btn  btn" type="submit" title="Отправить заказ в обработку">Отправить заказ</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
     </main>
 
 
       <footer class="page-footer">
         <div class="page-footer__wrapper">
+          <a class="page-footer__logo" href="index.html">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Лого Мишка">
+          </a>
           <ul class="page-footer__social  social-links">
             <li class="social-links__item"><a class="social-link  social-link--inst text-hidden" href="#">Инстаграм</a></li>
             <li class="social-links__item"><a class="social-link  social-link--fb text-hidden" href="#">Фэйсбук</a></li>
