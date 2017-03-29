@@ -1,16 +1,99 @@
 .main-nav {
   width: auto;
+  position: relative;
 
-  &__wrapper {
-    position: relative;
+  &__logo {
+    display: block;
+    width: 86px;
+    height: 35px;
+    margin: 21px auto;
+    border-bottom: 1px solid #ececec;
+    outline: 1px solid red;
   }
 
+//кнопка открытия мобильного меню
   &__button {
     .visible-mobile();
     position: absolute;
-    top: -50px;
+    top: 30px;
     right: 9.375%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: @light;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    outline: 1px solid yellow;
   }
+
+  &--closed &__button::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: @main;
+    box-shadow:
+      0px -6px 0 0 @main,
+      0px 6px 0 0 @main;
+  }
+
+  &--closed &__button:focus::before,
+  &--closed &__button:hover::before {
+    background-color: @green;
+    box-shadow:
+      0px -6px 0 0 @green,
+      0px 6px 0 0 @green;
+  }
+
+  &--closed &__button:active::before {
+    background-color: #c7c7c7;
+    box-shadow:
+      0px -6px 0 0 #c7c7c7,
+      0px 6px 0 0 #c7c7c7;
+  }
+
+  &--opened &__button {
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 27px;
+      height: 2px;
+      background-color: @main;
+      box-shadow: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -2px;
+    }
+
+    &:focus,
+    &:hover {
+
+      &::before,
+      &::after {
+        background-color: @green;
+      }
+    }
+
+    &:active {
+
+      &::before,
+      &::after {
+        background-color: #c7c7c7;
+      }
+    }
+  }
+//Закончились стили кнопки открытия мобильного меню
 
   &__list,
   &__user {
@@ -30,10 +113,14 @@
   }
 
   &__link {
+    display: block;
+    padding: 27px 9.375% 27px 23.75%;
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
     color: @main;
+    background-color: @light;
+    border-bottom: 1px solid #ececec;
   }
 
   &__link--small {
@@ -41,19 +128,49 @@
     line-height: 24px
   }
 
-  &__item:hover a[href],
-  &__item:focus a[href] {
-    opacity: 0.6;
+  &__item:hover &__link[href],
+  &__item:focus &__link[href] {
+    color: fade(@main, 60%);
   }
 
-  &__item:active a[href] {
-    opacity: 0.3;
+  &__item:active &__link[href] {
+    color: fade(@main, 30%);
   }
 
   &__label {
   .hidden-mobile();
   }
 }
+
+@media @mobile-widths-only {
+  .main-nav {
+
+    &--closed &__item {
+      display: none;
+    }
+
+    &__wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &--nojs &__wrapper {
+      position: static;
+    }
+
+    &--nojs &__button {
+      display: none;
+    }
+
+    &--nojs &__item {
+      display: block;
+    }
+  }
+}
+
+
 
 @media @tablet-widths {
   .main-nav {
@@ -64,6 +181,11 @@
       justify-content: flex-end;
       padding-left: 115px;
       outline: 1px solid pink;
+    }
+
+    &__logo {
+      width: 114px;
+      height: 46px;
     }
 
     &__list {
@@ -93,6 +215,11 @@
     &__wrapper {
       justify-content: space-between;
       padding-left: 0;
+    }
+
+    &__logo {
+      width: 150px;
+      height: 73px;
     }
 
     &__list {
