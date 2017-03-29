@@ -1,6 +1,7 @@
 .main-nav {
-  width: auto;
   position: relative;
+  width: auto;
+  min-height: 80px;
 
   &__logo {
     display: block;
@@ -178,32 +179,69 @@
     &__wrapper {
       .container();
       display: flex;
-      justify-content: flex-end;
-      padding-left: 115px;
+      flex-wrap: wrap;
+      justify-content: space-between;
       outline: 1px solid pink;
     }
 
     &__logo {
+      order: 1;
       width: 114px;
       height: 46px;
+      margin: 20px auto 20px 0;
+      border-bottom: none;
     }
 
     &__list {
-      position: absolute;
-      top: 105px;
-      left: 0;
-      z-index: 10;
+      order: 3;
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px;
+    }
+
+    &__user {
+      order: 2;
+      display: flex;
+    }
+
+    &__item {
+      display: flex;
+      flex-shrink: 0;
+    }
+
+    &__link {
+      margin-right: 37px;
+      padding: 18px 0;
+      font-size: 15px;
+      background-color: transparent;
+      border-bottom: none;
+      outline: 1px solid blue;
+    }
+
+    &__link--search {
+      width: 85px;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
+    }
+
+    &__link--cart {
+      margin: 0;
+      padding: 33px 0 33px 86px;
+      font-size: 17px;
     }
 
     &__label {
-      position: absolute;
-      right: 0;
-      top: 125px;
+      order: 4;
+      padding: 18px 0;
       font-weight: 400;
       font-size: 15px;
       line-height: 24px;
       color: @minor;
-      z-index: 10;
       outline: 1px solid green;
     }
   }
