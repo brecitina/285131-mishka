@@ -226,13 +226,14 @@
   .form-knitting {
 
     &__discr {
+      margin-bottom: 4px;
       font-size: 17px;
       line-height: 30px;
     }
 
     &__container {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 39px;
+      padding-bottom: 39px;
     }
 
     &__container:nth-child(2n+1) {
@@ -243,12 +244,20 @@
       flex-direction: row;
     }
 
+    &__section:nth-child(even) {
+      margin-bottom: 10px;
+    }
+
+    &__block-legend {
+      margin-bottom: 0;
+    }
+
     &__block-legend::before {
       content: none;
     }
 
     &__legend {
-      padding-top: 22px;
+      padding-top: 29px;
       padding-bottom: 22px;
       width: 167px;
       background-color: transparent;
@@ -267,16 +276,53 @@
     &__choice {
       box-sizing: border-box;
       min-width: 240px;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 80px;
       font-size: 19px;
       line-height: 19px;
+    }
+
+    &__item:first-child &__choice {
+      margin-top: 13px;
+      margin-bottom: 13px;
+    }
+
+    &__choice--radio {
+      margin-top: 13px;
+      margin-bottom: 13px;
+    }
+
+    &__choice::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__hidden:checked + &__choice::after {
+      top: 18px;
+      left: 11px;
+    }
+
+    &__hidden:checked + &__choice--radio::after {
+      width: 20px;
+      height: 20px;
+      top: 17px;
+      left: 17px;
     }
 
     &__label {
       display: flex;
       align-items: center;
       width: 100%;
+      margin-bottom: 9px;
       font-size: 19px;
       line-height: 19px;
+    }
+
+    &__item--info:last-child &__label {
+      margin-bottom: 9px;
     }
 
     &__customer-info {
@@ -291,14 +337,22 @@
     &__customer-info--phone,
     &__customer-info--email {
       background-position: right 22px center;
+      padding-bottom: 0;
+    }
+
+    &__customer-info--comment {
+      margin-top: 13px;
+      margin-bottom: 13px;
     }
 
     &__footer {
       display: flex;
       flex-wrap: wrap;
+      align-items: baseline;
     }
 
     &__footnote {
+      margin-bottom: 0;
       font-size: 17px;
       line-height: 30px;
     }
