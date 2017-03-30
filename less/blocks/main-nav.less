@@ -145,6 +145,7 @@
 
 @media @mobile-widths-only {
   .main-nav {
+    z-index: 3;
 
     &--closed &__item {
       display: none;
@@ -175,6 +176,7 @@
 
 @media @tablet-widths {
   .main-nav {
+    min-height: 88px;
 
     &__wrapper {
       .container();
@@ -208,7 +210,6 @@
 
     &__item {
       display: flex;
-      flex-shrink: 0;
     }
 
     &__link {
@@ -221,7 +222,7 @@
     }
 
     &__link--search {
-      width: 85px;
+      width: 82px;
       height: auto;
       margin: 0;
       padding: 0;
@@ -253,33 +254,73 @@
   .main-nav {
 
     &__wrapper {
-      justify-content: space-between;
-      padding-left: 0;
     }
 
     &__logo {
+      order: 2;
       width: 150px;
       height: 73px;
+      margin: auto;
     }
 
     &__list {
-      position: static;
-      width: 415px;
+      order: 1;
+      width: 430px;
     }
 
     &__user {
-      width: 350px;
+      order: 3;
+      width: 430px;
     }
 
     &__addition {
-      position: absolute;
-      left: 0;
-      top: 125px;
+      order: 4;
+      display: flex;
+      flex-wrap: wrap;
+      width: 800px;
       margin: 0;
       padding: 0;
       list-style: none;
-      z-index: 10;
       outline: 1px solid green;
+    }
+
+    &__link {
+      margin: 0;
+      padding: 33px 35px 33px 0;
+      font-size: 17px;
+    }
+
+    &__list &__item:nth-child(even) &__link {
+      margin-right: 35px;
+      padding-left: 35px;
+      padding-right: 0;
+      border-left: 1px solid #ececec;
+    }
+
+    &__link--search {
+      width: 82px;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
+    }
+
+    &__link--cart {
+      margin-right: 0;
+    }
+
+    &__link--small {
+      margin-right: 60px;
+      padding: 18px 0;
+      font-size: 15px;
+      background-color: transparent;
+    }
+
+    &__label {
+      order: 5;
     }
   }
 }
