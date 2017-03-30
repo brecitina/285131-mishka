@@ -1,7 +1,9 @@
 .form-knitting {
+  margin-bottom: 53px;
 
   &__discr {
     .container();
+    margin-top: -7px;
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
@@ -13,15 +15,14 @@
     .container();
     display: flex;
     flex-direction: column;
-    margin-top: 23px;
-    margin-bottom: 23px;
+    margin-top: 19px;
+    margin-bottom: 19px;
     border: none;
-    /*border-top: 1px solid @green;*/
     outline: 1px solid deeppink;
   }
 
   &__block-legend {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   &__block-legend::before{
@@ -46,6 +47,7 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 17px;
+    text-transform: uppercase;
     color: @green;
     background-color: @light;
     z-index: 2;
@@ -71,7 +73,7 @@
     position: relative;
     display: block;
     margin: 0;
-    margin-top: 22px;
+    margin-top: 21px;
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 64px;
@@ -81,6 +83,10 @@
     line-height: 18px;
     color: @main;
     cursor: pointer;
+  }
+
+  &__item:first-child &__choice {
+    margin-top: 0;
   }
 
   &__choice--radio {
@@ -136,13 +142,18 @@
   &__label {
     display: block;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 7px;
+    margin-bottom: 21px;
     padding: 0;
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
     color: @main;
     background-color: @light;
+  }
+
+  &__item--info:last-child &__label {
+    margin-bottom: 0;
   }
 
   &__customer-info {
@@ -171,6 +182,7 @@
   }
 
   &__customer-info--phone {
+    padding-top: 3px;
     padding-right: 40px;
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
@@ -178,6 +190,7 @@
   }
 
   &__customer-info--email {
+    padding-top: 3px;
     padding-right: 40px;
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
@@ -213,13 +226,14 @@
   .form-knitting {
 
     &__discr {
+      margin-bottom: 4px;
       font-size: 17px;
       line-height: 30px;
     }
 
     &__container {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 39px;
+      padding-bottom: 39px;
     }
 
     &__container:nth-child(2n+1) {
@@ -230,12 +244,20 @@
       flex-direction: row;
     }
 
+    &__section:nth-child(even) {
+      margin-bottom: 10px;
+    }
+
+    &__block-legend {
+      margin-bottom: 0;
+    }
+
     &__block-legend::before {
       content: none;
     }
 
     &__legend {
-      padding-top: 22px;
+      padding-top: 29px;
       padding-bottom: 22px;
       width: 167px;
       background-color: transparent;
@@ -247,25 +269,60 @@
       justify-content: space-between;
     }
 
-    &__item {
-      min-width: 240px;
-    }
-
     &__item--info {
       width: 100%;
     }
 
     &__choice {
+      box-sizing: border-box;
+      min-width: 240px;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 80px;
       font-size: 19px;
       line-height: 19px;
+    }
+
+    &__item:first-child &__choice {
+      margin-top: 13px;
+      margin-bottom: 13px;
+    }
+
+    &__choice--radio {
+      margin-top: 13px;
+      margin-bottom: 13px;
+    }
+
+    &__choice::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__hidden:checked + &__choice::after {
+      top: 18px;
+      left: 11px;
+    }
+
+    &__hidden:checked + &__choice--radio::after {
+      width: 20px;
+      height: 20px;
+      top: 17px;
+      left: 17px;
     }
 
     &__label {
       display: flex;
       align-items: center;
       width: 100%;
+      margin-bottom: 9px;
       font-size: 19px;
       line-height: 19px;
+    }
+
+    &__item--info:last-child &__label {
+      margin-bottom: 9px;
     }
 
     &__customer-info {
@@ -280,14 +337,22 @@
     &__customer-info--phone,
     &__customer-info--email {
       background-position: right 22px center;
+      padding-bottom: 0;
+    }
+
+    &__customer-info--comment {
+      margin-top: 13px;
+      margin-bottom: 13px;
     }
 
     &__footer {
       display: flex;
       flex-wrap: wrap;
+      align-items: baseline;
     }
 
     &__footnote {
+      margin-bottom: 0;
       font-size: 17px;
       line-height: 30px;
     }
@@ -307,6 +372,14 @@
       width: 700px;
     }
 
+    &__list {
+      justify-content: flex-start;
+    }
+
+    &__choice {
+      width: 264px;
+    }
+
     &__legend {
       width: 175px;
       padding-right: 0;
@@ -319,7 +392,7 @@
     &__customer-info--email,
     &__customer-info--comment {
       width: 700px;
-    } /*батарея мне не нравится*/
+    }
 
     &__footer {
       width: 700px;

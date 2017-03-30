@@ -1,4 +1,5 @@
 .contacts {
+  margin-top: 88px; //нужна волнистая линия
   background-color: @light;
 
   &__table {
@@ -53,7 +54,7 @@
       url("../img/icon-map-pin.svg"),
       url("../img/map-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top 47%, center;
   }
 
   &__btn {
@@ -63,11 +64,17 @@
 
 @media @tablet-widths {
   .contacts {
+    margin-top: 128px; //еще туда волна входит
+    margin-bottom: 58px;
+
+    &__table {
+      font-size: 17px;
+    }
 
     &__table tbody {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
     }
 
     &__table tr {
