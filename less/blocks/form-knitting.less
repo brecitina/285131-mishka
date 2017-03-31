@@ -120,14 +120,12 @@
   &__hidden:checked + &__choice::after {
     content: "";
     position: absolute;
-    top: 8px;
-    left: 3px;
+    top: 11px;
+    left: 8px;
     display: block;
-    width: 33px;
-    height: 22px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 23px;
+    height: 16px;
+    background: url("../img/icon-tick.svg") no-repeat center/cover;
   }
 
   &__hidden:checked + &__choice--radio::after {
@@ -300,9 +298,12 @@
       height: 50px;
     }
 
+
     &__hidden:checked + &__choice::after {
       top: 18px;
       left: 11px;
+      width: 33px;
+      height: 22px;
     }
 
     &__hidden:checked + &__choice--radio::after {
