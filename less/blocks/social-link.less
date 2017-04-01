@@ -6,15 +6,19 @@
   background-position: center;
   outline: 1px solid green;
 
-  &--inst {
-    background-image: url("../img/icon-insta.svg");
+  & svg {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  &--fb {
-    background-image: url("../img/icon-fb.svg");
+  &:hover path,
+  &:focus path {
+    fill: #46c1ae;
   }
 
-  &--tw {
-    background-image: url("../img/icon-twitter.svg");
+  &:active {
+    opacity: 0.3;
   }
 }

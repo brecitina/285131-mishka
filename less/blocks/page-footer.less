@@ -8,8 +8,6 @@
 
   &__logo {
     .hidden-mobile();
-    width: 102px; //проверить размеры в ФШ
-    height: 35px;
   }
 
   &__copyright {
@@ -30,12 +28,14 @@
     width: 30px;
     height: 35px;
     margin-left: 23px;
-    background-color: @gray;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
   }
 
-  &__copyright-logo:active {
+  &__copyright:hover path,
+  &__copyright:focus path {
+    fill: #46c1ae;
+  }
+
+  &__copyright:active {
     opacity: 0.3;
   }
 }
@@ -61,5 +61,22 @@
       &__copyright {
         border: none;
       }
+  }
+
+  .page-footer__logo {
+
+    & svg {
+      width: 102px;
+      height: 34px;
+    }
+
+    &:hover path,
+    &:focus path {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
