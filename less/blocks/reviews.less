@@ -62,6 +62,14 @@
   }
 }
 
+@media @tablet-widths and (min-resolution: 144dpi),
+       @tablet-widths and (min-resolution: 1.5dppx) {
+  .reviews {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 350px auto;
+  }
+}
+
 @media @desktop-widths {
   .reviews {
     background: @light;
@@ -72,5 +80,13 @@
       background-repeat: no-repeat;
       background-position: 0 100%;
     }
+  }
+}
+
+@media @desktop-widths and (min-resolution: 144dpi),
+       @desktop-widths and (min-resolution: 1.5dppx) {
+  .reviews__wrapper {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 350px auto;
   }
 }
