@@ -13,6 +13,34 @@ mainButton.addEventListener('click', function() {
   }
 });
 
+var buyLinks = document.querySelectorAll('.js-buy');
+
+buyLinks.forEach(function(link) {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    overlay.classList.add('modal-overlay--show');
+    popup.classList.add('modal-content--show');
+  });
+});
+
+var popup = document.querySelector('.modal-content');
+var overlay = document.querySelector('.modal-overlay');
+
+
+window.addEventListener('keydown', function (event) {
+  if (event.keyCode === 27) {
+    closePopup();
+  }
+});
+overlay.addEventListener('click', function (event) {
+  closePopup();
+});
+function closePopup(event) {
+  if (popup.classList.contains('modal-content--show')) {
+    popup.classList.remove('modal-content--show');
+    overlay.classList.remove('modal-overlay--show');
+  }
+};
 
 function initMap() {
   var mapWraper = document.querySelector('.contacts__map');

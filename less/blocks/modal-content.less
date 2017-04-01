@@ -1,8 +1,18 @@
 .modal-content {
+  position: fixed;
+  top: 50%;
+  margin-top: -168px;
+  z-index: 20;
+  display: none;
   padding-top: 38px;
   padding-bottom: 47px;
+  background-color: @light;
   border-top: 1px solid #c7c7c7;
   box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.25);
+
+  &--show {
+    display: block;
+  }
 
   &__wrapper {
     width: auto;
@@ -24,17 +34,14 @@
 
 @media @tablet-widths {
   .modal-content {
+    width: 566px;
+    left: 50%;
+    margin-left: -288px;
+    border: 1px solid #c6c6c6;
 
     &__title {
       font-size: 30px;
       line-height: 57px;
     }
-  }
-}
-
-@media @tablet-widths {
-  .modal-content {
-    width: 566px;
-    border: 1px solid #c6c6c6;
   }
 }
