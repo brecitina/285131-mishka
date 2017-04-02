@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 66px;
+  margin-bottom: 60px;
   color: @main;
 
   &__layout {
@@ -29,7 +29,7 @@
     top: 50%;
     left: 50%;
     margin-top: -37px;
-    margin-left: -42px;
+    margin-left: -51px;
     transition: all 0.5s ease-in;
     z-index: 1;
     display: block;
@@ -50,7 +50,7 @@
   }
 
   &__wrapper {
-    margin: 25px 13.692% 25px 12.692%;
+    margin: 25px 13.692% 33px 12.692%;
   }
 
   &__discr {
@@ -122,6 +122,7 @@
 
     &__container {
       position: absolute;
+      top: 0;
       left: 0;
       width: 680px;
       height: 455px;
@@ -138,6 +139,10 @@
     &__discr {
       margin-bottom: 45px;
     }
+  }
+
+  .video__container::before {
+    margin-left: -41px;
   }
 }
 

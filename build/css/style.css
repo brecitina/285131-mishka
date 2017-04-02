@@ -1042,6 +1042,9 @@ template {
 .contacts__btn {
   margin: 40px auto;
 }
+.catalog {
+  margin-bottom: 34px;
+}
 .catalog-item {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -1121,7 +1124,7 @@ template {
   fill-opacity: 0.3;
 }
 .video {
-  margin-bottom: 66px;
+  margin-bottom: 60px;
   color: #000000;
 }
 .video__layout {
@@ -1147,7 +1150,7 @@ template {
   top: 50%;
   left: 50%;
   margin-top: -37px;
-  margin-left: -42px;
+  margin-left: -51px;
   transition: all 0.5s ease-in;
   z-index: 1;
   display: block;
@@ -1165,7 +1168,7 @@ template {
   opacity: 0.3;
 }
 .video__wrapper {
-  margin: 25px 13.692% 25px 12.692%;
+  margin: 25px 13.692% 33px 12.692%;
 }
 .video__discr {
   margin: 0;
@@ -1693,7 +1696,7 @@ template {
   .page-title {
     position: relative;
     margin-top: -60px;
-    margin-bottom: 73px;
+    margin-bottom: 77px;
     border-top: 1px solid #ececec;
   }
   .page-title::after {
@@ -1886,6 +1889,9 @@ template {
     height: 457px;
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-tablet@1x.jpg");
   }
+  .catalog {
+    margin-bottom: 61px;
+  }
   .catalog-item {
     display: -ms-flexbox;
     display: flex;
@@ -1915,6 +1921,7 @@ template {
     margin: 0 4.94%;
   }
   .catalog-item__title {
+    padding-bottom: 4px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -2282,6 +2289,9 @@ template {
     order: 5;
   }
   .page-title {
+    margin-bottom: 118px;
+  }
+  .page-title--index {
     margin-bottom: 67px;
   }
   .page-title::after {
@@ -2451,6 +2461,7 @@ template {
   }
   .video__container {
     position: absolute;
+    top: 0;
     left: 0;
     width: 680px;
     height: 455px;
@@ -2464,6 +2475,9 @@ template {
   }
   .video__discr {
     margin-bottom: 45px;
+  }
+  .video__container::before {
+    margin-left: -41px;
   }
   .form-knitting__discr {
     width: 1050px;
