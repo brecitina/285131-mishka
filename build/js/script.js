@@ -43,6 +43,8 @@ function closePopup(event) {
 };
 
 function initMap() {
+  if(!ymaps)
+    return;
   var mapWraper = document.querySelector('.contacts__map');
   mapWraper.classList.remove('contacts__map--default');
   // Создание экземпляра карты и его привязка к контейнеру с

@@ -496,7 +496,6 @@ template {
   border-color: #63d1bb;
 }
 .charter {
-  margin-bottom: 35px;
   background-color: #ffffff;
 }
 .charter__wrapper {
@@ -775,7 +774,8 @@ template {
   opacity: 1;
 }
 .week-popular {
-  margin-bottom: 45px;
+  position: relative;
+  margin-bottom: 28px;
   color: #444444;
   background-color: #ffffff;
   overflow: hidden;
@@ -787,7 +787,7 @@ template {
       flex-wrap: wrap;
   -ms-flex-align: center;
       align-items: center;
-  margin: 18px 0 24px;
+  margin: 18px 0 43px;
 }
 .week-popular__discr {
   max-width: 330px;
@@ -832,6 +832,19 @@ template {
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+}
+.week-popular::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 .features__list {
   display: -ms-flexbox;
@@ -934,7 +947,10 @@ template {
   color: #444444;
 }
 .reviews {
+  position: relative;
   background-color: #ffffff;
+  margin-bottom: 35px;
+  padding-bottom: 51px;
 }
 .reviews__btns-layout {
   width: 260px;
@@ -962,8 +978,20 @@ template {
 .reviews__btn--prev {
   transform: scaleX(-1);
 }
+.reviews::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
 .contacts {
-  margin-top: 88px;
   background-color: #ffffff;
 }
 .contacts__table {
@@ -1114,7 +1142,8 @@ template {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -37px;
+  margin-left: -42px;
   transition: all 0.5s ease-in;
   z-index: 1;
   display: block;
@@ -1125,10 +1154,10 @@ template {
 }
 .video__container:hover::before,
 .video__container:focus::before {
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: scale(1.2);
 }
 .video__container:active::before {
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: scale(0.8);
   opacity: 0.3;
 }
 .video__wrapper {
@@ -1667,13 +1696,13 @@ template {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -10px;
     display: block;
     width: 100%;
-    height: 24px;
+    height: 22px;
     background-image: url("../img/bg-zigzag-fill.svg");
-    background-size: contain;
     background-repeat: repeat-x;
+    background-size: contain;
   }
   .page-title__wrapper {
     width: 550px;
@@ -1713,6 +1742,9 @@ template {
   .page-title__link::after {
     top: 34px;
   }
+  .week-popular {
+    margin-bottom: 49px;
+  }
   .week-popular__layout {
     position: relative;
     -ms-flex-wrap: nowrap;
@@ -1723,7 +1755,7 @@ template {
     justify-content: space-between;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin: 50px 0;
+    margin: 50px 0 68px;
     padding: 0;
     padding-right: 378px;
   }
@@ -1761,8 +1793,8 @@ template {
     font-size: 20px;
     line-height: 24px;
   }
-  .features {
-    margin-top: 68px;
+  .week-popular::after {
+    height: 15px;
   }
   .features__list {
     max-width: 700px;
@@ -1790,7 +1822,8 @@ template {
   }
   .reviews {
     position: relative;
-    margin-bottom: 68px;
+    margin-bottom: 45px;
+    padding-bottom: 84px;
     background-color: #ffffff;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -1818,8 +1851,10 @@ template {
     margin-bottom: 0;
     z-index: 10;
   }
+  .week-popular::after {
+    height: 15px;
+  }
   .contacts {
-    margin-top: 128px;
     margin-bottom: 58px;
   }
   .contacts__table {
@@ -2143,9 +2178,6 @@ template {
     width: 1050px;
     margin: 0 auto;
   }
-  .charter {
-    margin-bottom: 58px;
-  }
   .charter__title,
   .charter__title--contacts {
     padding: 0 0 0 175px;
@@ -2257,8 +2289,7 @@ template {
     padding-bottom: 359px;
   }
   .page-title__link {
-    padding: 30px 40px;
-    padding-right: 100px;
+    padding: 30px 100px 34px 40px;
   }
   .page-title__link::after {
     top: 30px;
@@ -2278,6 +2309,9 @@ template {
     width: 525px;/*картинка стоит мобильная*/
     height: 636px;
   }
+  .week-popular::after {
+    height: 23px;
+  }
   .features__list {
     margin-left: 175px;
   }
@@ -2286,6 +2320,8 @@ template {
     padding: 0;
   }
   .reviews {
+    margin-bottom: 75px;
+    padding-bottom: 91px;
     background: #ffffff;
   }
   .reviews__wrapper {
@@ -2293,6 +2329,9 @@ template {
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 100%;
+  }
+  .week-popular::after {
+    height: 23px;
   }
   .contacts {
     position: relative;
