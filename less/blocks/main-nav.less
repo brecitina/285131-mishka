@@ -2,6 +2,7 @@
   position: relative;
   width: auto;
   min-height: 80px;
+  z-index: 1;
 
   &__logo {
     display: block;
@@ -9,7 +10,6 @@
     height: 35px;
     margin: 21px auto;
     border-bottom: 1px solid #ececec;
-    outline: 1px solid red;
   }
 
 //кнопка открытия мобильного меню
@@ -26,7 +26,7 @@
     border: none;
     cursor: pointer;
     z-index: 2;
-    outline: 1px solid yellow;
+    outline: none;
   }
 
   &--closed &__button::before {
@@ -101,7 +101,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    outline: 1px solid green;
   }
 
   &__addition {
@@ -143,6 +142,43 @@
   }
 }
 
+.main-nav__link--search,
+.main-nav__link--cart {
+  position: relative;
+
+  & svg {
+    position: absolute;
+    left: 9.375%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+  }
+
+  & path {
+    fill-opacity: 0.2;
+  }
+
+  &:focus path,
+  &:hover path {
+    fill-opacity: 1;
+    fill: @green;
+  }
+
+  &:active path {
+    fill: @green;
+    fill-opacity: 0.3;
+  }
+}
+
+.main-nav__link--cart {
+
+  & svg {
+    width: 21px;
+    height: 18px;
+  }
+}
+
 @media @mobile-widths-only {
   .main-nav {
     z-index: 3;
@@ -172,8 +208,6 @@
   }
 }
 
-
-
 @media @tablet-widths {
   .main-nav {
     min-height: 88px;
@@ -183,7 +217,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      outline: 1px solid pink;
     }
 
     &__logo {
@@ -218,7 +251,6 @@
       font-size: 15px;
       background-color: transparent;
       border-bottom: none;
-      outline: 1px solid blue;
     }
 
     &__link--search {
@@ -245,7 +277,14 @@
       font-size: 15px;
       line-height: 24px;
       color: @minor;
-      outline: 1px solid green;
+    }
+  }
+
+  .main-nav__link--search,
+  .main-nav__link--cart  {
+
+    & svg {
+      left: 34px;
     }
   }
 }
@@ -281,7 +320,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      outline: 1px solid green;
     }
 
     &__link {

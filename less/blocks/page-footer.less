@@ -22,18 +22,21 @@
     background-color: @gray;
   }
 
-  &__cooryright-logo {
+  &__copyright-logo {
     display: inline-block;
     vertical-align: middle;
     width: 30px;
     height: 35px;
     margin-left: 23px;
-    background-color: @gray;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
   }
 
-  &__cooryright-logo:active {
+  &__copyright:hover path,
+  &__copyright:focus path {
+    fill: #46c1ae;
+  }
+
+  &__copyright:active {
+    fill: #46c1ae;
     opacity: 0.3;
   }
 }
@@ -59,5 +62,23 @@
       &__copyright {
         border: none;
       }
+  }
+
+  .page-footer__logo {
+
+    & svg {
+      width: 102px;
+      height: 34px;
+    }
+
+    &:hover path,
+    &:focus path {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 }

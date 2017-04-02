@@ -5,7 +5,6 @@
     width: 260px;
     margin: 0 auto;
     margin-bottom: 38px;
-    outline: 1px solid pink;
   }
 
   &__btn {
@@ -39,7 +38,6 @@
       position: relative;
       padding-top: 70px;
       padding-bottom: 47px;
-      outline: 1px solid green;
     }
 
     & .btn {
@@ -62,6 +60,13 @@
   }
 }
 
+@media @tablet-widths and (min-resolution: 144dpi), @tablet-widths and (min-resolution: 1.5dppx) {
+  .reviews {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 350px auto;
+  }
+}
+
 @media @desktop-widths {
   .reviews {
     background: @light;
@@ -72,5 +77,12 @@
       background-repeat: no-repeat;
       background-position: 0 100%;
     }
+  }
+}
+
+@media @desktop-widths and (min-resolution: 144dpi), @desktop-widths and (min-resolution: 1.5dppx) {
+  .reviews__wrapper {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 350px auto;
   }
 }

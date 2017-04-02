@@ -13,12 +13,12 @@
 
   &__section {
     .container();
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 19px;
     margin-bottom: 19px;
     border: none;
-    outline: 1px solid deeppink;
   }
 
   &__block-legend {
@@ -90,7 +90,7 @@
   }
 
   &__choice--radio {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
   &__choice::before {
@@ -120,14 +120,12 @@
   &__hidden:checked + &__choice::after {
     content: "";
     position: absolute;
-    top: 8px;
-    left: 3px;
+    top: 11px;
+    left: 8px;
     display: block;
-    width: 33px;
-    height: 22px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 23px;
+    height: 16px;
+    background: url("../img/icon-tick.svg") no-repeat center/cover;
   }
 
   &__hidden:checked + &__choice--radio::after {
@@ -177,24 +175,43 @@
     &:focus,
     &:active {
       border-color: @green;
-      outline: none; /*Есть ли необходимость убирать?*/
+      outline: none;
     }
   }
 
   &__customer-info--phone {
     padding-top: 3px;
     padding-right: 40px;
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: right 5px center;
   }
 
   &__customer-info--email {
     padding-top: 3px;
     padding-right: 40px;
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-position: right 5px center;
+  }
+
+  &__customer-info--phone + &__icon {
+    position: absolute;
+    right: 8px;
+    bottom: 17px;
+    width: 25px;
+    height: 25px;
+    fill-opacity: 0.2;
+  }
+
+  &__customer-info--email + &__icon {
+    position: absolute;
+    right: 4px;
+    bottom: 13px;
+    width: 32px;
+    height: 32px;
+    fill-opacity: 0.2;
+  }
+
+  &__customer-info:hover + &__icon path,
+  &__customer-info:focus + &__icon path,
+  &__customer-info:active + &__icon path {
+    fill-opacity: 1;
+    fill: @green;
   }
 
   &__customer-info--comment {
@@ -205,7 +222,6 @@
   &__footer {
     .container();
     justify-content: space-between;
-    outline: 1px solid red;
   }
 
   &__footnote {
@@ -300,9 +316,12 @@
       height: 50px;
     }
 
+
     &__hidden:checked + &__choice::after {
       top: 18px;
       left: 11px;
+      width: 33px;
+      height: 22px;
     }
 
     &__hidden:checked + &__choice--radio::after {
@@ -340,6 +359,16 @@
       padding-bottom: 0;
     }
 
+    &__customer-info--phone + &__icon {
+      right: 24px;
+      bottom: 22px;
+    }
+
+    &__customer-info--email + &__icon {
+      right: 22px;
+      bottom: 8px;
+    }
+
     &__customer-info--comment {
       margin-top: 13px;
       margin-bottom: 13px;
@@ -370,6 +399,11 @@
 
     &__discr {
       width: 700px;
+      margin-top: -4px;
+    }
+
+    &__container {
+      padding-bottom: 38px;
     }
 
     &__list {
@@ -392,6 +426,14 @@
     &__customer-info--email,
     &__customer-info--comment {
       width: 700px;
+    }
+
+    &__customer-info--phone + &__icon {
+      right: 183px;
+    }
+
+    &__customer-info--email + &__icon {
+      right: 179px;
     }
 
     &__footer {

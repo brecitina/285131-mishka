@@ -2,7 +2,7 @@
   margin-bottom: 27px;
   color: @main;
   background-color: @gray;
-  z-index: -1;
+  z-index: 0;
 
   &--index {
     background-image: url("../img/hero-mobile@1x.jpg");
@@ -34,33 +34,78 @@
   &__item {
     font-size: 0;
     line-height: 0;
+    background-color: @green;
+  }
+
+  &__item:nth-child(even) {
+    background-color: @green-sec;
   }
 
   &__link {
+    position: relative;
     display: block;
     padding: 28px 9.375%;
+    padding-right: 28%;
     font-weight: 700;
     font-size: 19px;
     line-height: 24px;
-    background-repeat: no-repeat;
-    background-position: right 9.375% center;
   }
 
   &__link--icon-lamp {
     color: @light;
-    background-color: @green;
-    background-image: url("../img/icon-interior.svg");
+  }
+
+  &__link--icon-lamp::after  {
+    content: "";
+    position: absolute;
+    right: 10.375%;
+    top: 21px;
+    width: 41px;
+    height: 63px;
+    background: url("../img/icon-interior.svg") no-repeat;
+    opacity: 0.5;
   }
 
   &__link--icon-brick {
     color: @light;
-    background-color: @green-sec;
-    background-image: url("../img/icon-toy.svg");
   }
 
-  &__link--icon-lamp:active,
-  &__link--icon-brick:active {
-    color: @light03;
+  &__link--icon-brick::after  {
+    content: "";
+    position: absolute;
+    right: 9.375%;
+    top: 21px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/icon-toy.svg") no-repeat;
+    opacity: 0.5;
+  }
+
+  &__item:focus,
+  &__item:hover,
+  &__item:active {
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+
+  &__link:hover::after,
+  &__link:focus::after {
+    opacity: 0.7;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+
+  &__link:active::after {
+    opacity: 1;
+  }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .page-title--index {
+    background-image: url(../img/hero-mobile@2x.jpg);
+    background-size: 575px auto;
   }
 }
 
@@ -83,7 +128,9 @@
 
     &--index {
       margin-bottom: 45px;
+      background-image: url(../img/hero-desktop@1x.jpg);
       background-position: center 0;
+      background-size: cover;
     }
 
     &--index &__wrapper {
@@ -103,10 +150,21 @@
 
     &__link {
       padding: 30px 36px;
+      padding-right: 28%;
       font-size: 20px;
       line-height: 30px;
-      background-position: right 57px center;
     }
+
+    &__link::after {
+      top: 34px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .page-title--index {
+    background-image: url(../img/hero-desktop@2x.jpg);
+    background-size: 1150px auto;
   }
 }
 
@@ -124,12 +182,18 @@
     }
 
     &--index &__wrapper {
-      padding-top: 160px;
-      padding-bottom: 350px;
+      padding-top: 151px;
+      padding-bottom: 359px;
     }
 
     &__link {
       padding: 30px 40px;
+      padding-right: 100px;
+    }
+
+    &__link::after {
+      top: 30px;
+      right: 36px;
     }
   }
 }

@@ -22,17 +22,17 @@
     border-bottom: 1px solid #cecece;
   }
 
-  &__link img {
-    display: block;
-    width: 258px;
-    height: 194px; /*пока высоту оставим так*/
+  &__link--review {
+    //width: 258px;
+    //height:194px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0;
+    line-height: 0;
   }
 
   &__wrapper {
     margin: 0 10.345%;
-    outline: 1px solid pink;
   }
 
   &__title {
@@ -54,18 +54,31 @@
     line-height: 24px;
     color: @minor;
   }
+}
 
-  &__price {
-    display: block;
-    margin: 0;
-    padding: 24px 0;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 24px;
-    color: @main;
-    background-image: url("../img/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-position: right center;
+.catalog-item__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 24px 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: @main;
+
+  & path {
+    fill-opacity: 0.2;
+  }
+
+  &:focus path,
+  &:hover path {
+    fill-opacity: 1;
+    fill: @green;
+  }
+
+  &:active path {
+    fill: @green;
+    fill-opacity: 0.3;
   }
 }
 
@@ -79,9 +92,12 @@
       border: none;
     }
 
-    &__link img {
-      width: 334px;
-      height: 332px; /*пока высоту оставим так*/
+    &__link--review {
+      align-self: center;
+      width: 50%;
+      //height: 332px;
+      margin: 0;
+      overflow: hidden;
     }
 
     &__wrapper {
@@ -122,16 +138,24 @@
       margin-top: 55px;
     }
 
-    &__link img {
+    &__link--review {
       width: 314px;
-      height: 461px; /*пока высоту оставим так*/
+      height: 459px;
+      border-bottom: 1px solid #cecece;
     }
 
     &__wrapper {
       flex-grow: 1;
       width: 252px;
-      margin: 0 31px;
-      border-top: 1px solid #cecece;
+      margin: 0 28px;
+    }
+
+    &__title {
+      padding-bottom: 3px;
+    }
+
+    &__discr {
+      padding-bottom: 15px;
     }
 
     &__price {

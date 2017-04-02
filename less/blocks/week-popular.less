@@ -9,7 +9,6 @@
     flex-wrap: wrap;
     align-items: center;
     margin: 18px 0 24px;
-    outline: 1px solid pink;
   }
 
   &__discr {
@@ -39,9 +38,11 @@
   }
 
   &__review {
-    min-width: 260px;
-    min-height: 315px;
+    width: 260px;
+    height: 315px;
     margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
   }
 
   &__price-block {
@@ -96,8 +97,13 @@
       left: 50%;
       bottom: 0;
       width: 50%;
-      max-width: 350px;
       height: auto;
+    }
+
+    &__review img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
 
     &__price-block {
