@@ -846,6 +846,9 @@ template {
   background-size: contain;
   background-repeat: repeat-x;
 }
+.features {
+  margin-bottom: 33px;
+}
 .features__list {
   display: -ms-flexbox;
   display: flex;
@@ -853,7 +856,8 @@ template {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin: 30px 0;
+  margin: 0;
+  margin-top: 30px;
   padding: 0;
   list-style: none;
 }
@@ -910,8 +914,8 @@ template {
   background-image: url("../img/icon-feature-4.svg");
 }
 .features__item--gift::before {
-  top: 12px;
-  left: 3px;
+  top: 8px;
+  left: 0px;
   background-image: url("../img/icon-feature-6.svg");
 }
 .features__item:nth-child(2n) {
@@ -920,12 +924,12 @@ template {
 }
 .review {
   margin: 0;
-  padding: 25px 0;
+  padding: 26px 0;
   color: #444444;
 }
 .review__text {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   padding: 0;
   font-weight: 400;
   font-size: 15px;
@@ -955,7 +959,7 @@ template {
 .reviews__btns-layout {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 .reviews__btn {
   height: 50px;
@@ -1564,7 +1568,7 @@ template {
   }
   .charter__title--contacts {
     position: relative;
-    padding-top: 20px;
+    padding-top: 17px;
     padding-bottom: 20px;
   }
   .charter__title--contacts::after {
@@ -1588,7 +1592,7 @@ template {
   .charter__subtitle {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 10px;
     display: block;
     width: 125px;
     font-size: 17px;
@@ -1796,6 +1800,9 @@ template {
   .week-popular::after {
     height: 15px;
   }
+  .features {
+    margin-bottom: 28px;
+  }
   .features__list {
     max-width: 700px;
     margin-top: 41px;
@@ -1831,12 +1838,12 @@ template {
   }
   .reviews__wrapper {
     position: relative;
-    padding-top: 70px;
+    padding-top: 76px;
     padding-bottom: 47px;
   }
-  .reviews .btn {
+  .reviews__feedback {
     position: absolute;
-    top: 70px;
+    top: 76px;
     right: 0;
     width: 170px;
     z-index: 10;
@@ -1851,7 +1858,7 @@ template {
     margin-bottom: 0;
     z-index: 10;
   }
-  .week-popular::after {
+  .reviews::after {
     height: 15px;
   }
   .contacts {
@@ -2184,6 +2191,9 @@ template {
     font-size: 53px;
     line-height: 57px;
   }
+  .charter__title--contacts {
+    margin-bottom: 35px;
+  }
   .charter__title--contacts::after {
     left: 65px;
     top: 0;
@@ -2201,7 +2211,8 @@ template {
     background-position: 0 0;
   }
   .charter__subtitle {
-    left: 25px;
+    left: 20px;
+    top: 13px;
   }
   .main-nav__addition {
     display: block;
@@ -2271,7 +2282,7 @@ template {
     order: 5;
   }
   .page-title {
-    margin-bottom: 120px;
+    margin-bottom: 67px;
   }
   .page-title::after {
     height: 34px;
@@ -2295,15 +2306,20 @@ template {
     top: 30px;
     right: 36px;
   }
+  .week-popular {
+    padding-top: 52px;
+    margin-bottom: 59px;
+  }
   .week-popular__layout {
+    margin-bottom: 96px;
     padding-left: 175px;
     padding-right: 50%;
   }
   .week-popular__discr {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
   }
   .week-popular__table {
-    margin-bottom: 88px;
+    margin-bottom: 81px;
   }
   .week-popular__review {
     width: 525px;/*картинка стоит мобильная*/
@@ -2314,14 +2330,23 @@ template {
   }
   .features__list {
     margin-left: 175px;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .features__item {
+    -ms-flex-preferred-size: 283px;
+    flex-basis: 283px;
   }
   .review {
     margin-left: 175px;
     padding: 0;
   }
+  .review__text {
+    margin-bottom: 39px;
+  }
   .reviews {
     margin-bottom: 75px;
-    padding-bottom: 91px;
+    padding-bottom: 84px;
     background: #ffffff;
   }
   .reviews__wrapper {
@@ -2330,7 +2355,14 @@ template {
     background-repeat: no-repeat;
     background-position: 0 100%;
   }
-  .week-popular::after {
+  .reviews__feedback {
+    width: 174px;
+    top: 85px;
+  }
+  .reviews__btns-layout {
+    bottom: 104px;
+  }
+  .reviews::after {
     height: 23px;
   }
   .contacts {
@@ -2340,7 +2372,7 @@ template {
     overflow: hidden;
   }
   .contacts__table {
-    margin-bottom: 55px;
+    margin-bottom: 64px;
   }
   .contacts__table tbody {
     margin-bottom: 0;

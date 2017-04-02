@@ -7,7 +7,7 @@
   &__btns-layout {
     width: 260px;
     margin: 0 auto;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   &__btn {
@@ -54,13 +54,13 @@
 
     &__wrapper {
       position: relative;
-      padding-top: 70px;
+      padding-top: 76px;
       padding-bottom: 47px;
     }
 
-    & .btn {
+    &__feedback {
       position: absolute;
-      top: 70px;
+      top: 76px;
       right: 0;
       width: 170px;
       z-index: 10;
@@ -77,7 +77,7 @@
     }
   }
 
-  .week-popular::after {
+  .reviews::after {
     height: 15px;
   }
 }
@@ -92,7 +92,7 @@
 @media @desktop-widths {
   .reviews {
     margin-bottom: 75px;
-    padding-bottom: 91px;
+    padding-bottom: 84px;
     background: @light;
 
     &__wrapper {
@@ -103,7 +103,16 @@
     }
   }
 
-  .week-popular::after {
+  .reviews__feedback {
+    width: 174px;
+    top: 85px;
+  }
+
+  .reviews__btns-layout {
+    bottom: 104px;
+  }
+
+  .reviews::after {
     height: 23px;
   }
 }
