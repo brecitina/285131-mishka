@@ -1103,9 +1103,33 @@ template {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 .video__container {
+  position: relative;
   height: 150px;
   border-top: 1px solid #cecece;
   border-bottom: 1px solid #cecece;
+  background: url("../img/video-mobile@1x.jpg") no-repeat center;
+}
+.video__container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  display: block;
+  width: 101px;
+  height: 77px;
+  background: url("../img/icon-play.svg") no-repeat center / cover;
+  cursor: pointer;
+}
+.video__container:hover::before,
+.video__container:focus::before {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.video__container:active::before {
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0.3;
 }
 .video__wrapper {
   margin: 25px 13.692% 25px 12.692%;
@@ -1639,6 +1663,18 @@ template {
     margin-bottom: 73px;
     border-top: 1px solid #ececec;
   }
+  .page-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
   .page-title__wrapper {
     width: 550px;
     padding-top: 93px;
@@ -1669,7 +1705,7 @@ template {
     width: 50%;
   }
   .page-title__link {
-    padding: 30px 36px;
+    padding: 31px 36px;
     padding-right: 28%;
     font-size: 20px;
     line-height: 30px;
@@ -1864,6 +1900,7 @@ template {
     order: -1;
     height: 455px;
     border-top: none;
+    background-image: url("../img/video-tablet@1x.jpg");
   }
   .video__wrapper {
     margin-top: 0;
@@ -2086,6 +2123,7 @@ template {
   .page-title--index {
     background-image: url(../img/hero-desktop@2x.jpg);
     background-size: 1150px auto;
+    background-size: cover;
   }
   .reviews {
     background-image: url("../img/review@2x.jpg");
@@ -2093,8 +2131,11 @@ template {
   }
   .contacts__map--default {
     background-image: url("../img/icon-map-pin.svg"), url(../img/map-tablet@2x.jpg);
-    background-size: auto auto,
-      768px auto;
+    background-size: auto auto, 768px auto;
+  }
+  .video__container {
+    background-image: url("../img/video-tablet@2x.jpg");
+    background-size: 668px auto;
   }
 }
 @media (min-width: 1150px) {
@@ -2199,6 +2240,9 @@ template {
   }
   .page-title {
     margin-bottom: 120px;
+  }
+  .page-title::after {
+    height: 34px;
   }
   .page-title__wrapper {
     padding-bottom: 110px;
@@ -2337,12 +2381,11 @@ template {
   .video__container {
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     width: 680px;
     height: 455px;
     border-bottom: none;
     border-right: 1px solid #cecece;
+    background-image: url("../img/video-desktop@1x.jpg");
   }
   .video__wrapper {
     margin-left: 61px;
@@ -2420,8 +2463,11 @@ template {
   }
   .contacts__map--default {
     background-image: url("../img/icon-map-pin.svg"), url(../img/map-desktop@2x.jpg);
-    background-size: auto auto,
-      525px auto;
+    background-size: auto auto, 525px auto;
+  }
+  .video__container {
+    background-image: url("../img/video-desktop@2x.jpg");
+    background-size: 682px auto;
   }
 }
 @media (max-width: 767px) {
@@ -2447,14 +2493,17 @@ template {
     display: block;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .page-title--index {
     background-image: url(../img/hero-mobile@2x.jpg);
     background-size: 575px auto;
   }
   .contacts__map--default {
     background-image: url("../img/icon-map-pin.svg"), url(../img/map-mobile@2x.jpg);
-    background-size: auto auto,
-      320px auto;
+    background-size: auto auto, 320px auto;
+  }
+  .video__container {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 260px auto;
   }
 }

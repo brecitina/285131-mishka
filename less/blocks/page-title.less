@@ -116,6 +116,19 @@
     margin-bottom: 73px;
     border-top: 1px solid #ececec;
 
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      background-repeat: repeat-x;
+    }
+
     &__wrapper {
       width: 550px;
       padding-top: 93px;
@@ -149,7 +162,7 @@
     }
 
     &__link {
-      padding: 30px 36px;
+      padding: 31px 36px;
       padding-right: 28%;
       font-size: 20px;
       line-height: 30px;
@@ -172,6 +185,10 @@
 @media @desktop-widths {
   .page-title {
     margin-bottom: 120px;
+
+    &::after {
+      height: 34px;
+    }
 
     &__wrapper {
       padding-bottom: 110px;
