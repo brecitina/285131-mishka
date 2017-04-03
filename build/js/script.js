@@ -15,7 +15,7 @@ mainButton.addEventListener('click', function() {
 
 var buyLinks = document.querySelectorAll('.js-buy');
 
-buyLinks.forEach(function(link) {
+[].forEach.call(buyLinks, function(link) {
   link.addEventListener('click', function (event) {
     event.preventDefault();
     overlay.classList.add('modal-overlay--show');

@@ -1975,6 +1975,7 @@ template {
     margin: 0 50px;
   }
   .form-knitting__discr {
+    margin-top: -5px;
     margin-bottom: 4px;
     font-size: 17px;
     line-height: 30px;
@@ -1991,7 +1992,8 @@ template {
     flex-direction: row;
   }
   .form-knitting__section:nth-child(even) {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    margin-top: 8px;
   }
   .form-knitting__block-legend {
     margin-bottom: 0;
@@ -2085,7 +2087,7 @@ template {
     bottom: 8px;
   }
   .form-knitting__customer-info--comment {
-    margin-top: 13px;
+    margin-top: 10px;
     margin-bottom: 13px;
   }
   .form-knitting__footer {
@@ -2493,7 +2495,7 @@ template {
   }
   .form-knitting__discr {
     width: 700px;
-    margin-top: -4px;
+    margin-top: 0;
   }
   .form-knitting__container {
     padding-bottom: 38px;
@@ -2508,7 +2510,7 @@ template {
   .form-knitting__legend {
     width: 175px;
     padding-right: 0;
-    text-align: center;
+    padding-left: 63px;
   }
   .form-knitting__choice--radio,
   .form-knitting__item--info,
