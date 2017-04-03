@@ -1151,7 +1151,7 @@ template {
   left: 50%;
   margin-top: -37px;
   margin-left: -51px;
-  transition: all 0.5s ease-in;
+  transition: all 0.1s ease-in;
   z-index: 1;
   display: block;
   width: 101px;
@@ -1178,6 +1178,10 @@ template {
   line-height: 24px;
   color: #444444;
   background-color: #ffffff;
+}
+.video__container video {
+  display: none;
+  width: 100%;
 }
 .form-knitting {
   margin-bottom: 53px;
@@ -2077,6 +2081,7 @@ template {
   .form-knitting__customer-info--email {
     background-position: right 22px center;
     padding-bottom: 0;
+    padding-right: 60px;
   }
   .form-knitting__customer-info--phone + .form-knitting__icon {
     right: 24px;
@@ -2126,16 +2131,15 @@ template {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 143px;
-  }
-  .page-footer__social {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 143px;
   }
   .page-footer__copyright {
+    width: 190px;
+    text-align: right;
     border: none;
+  }
+  .page-footer__logo {
+    width: 190px;
   }
   .page-footer__logo svg {
     width: 102px;
@@ -2387,9 +2391,9 @@ template {
     margin-bottom: 64px;
   }
   .contacts__table tbody {
+    width: 315px;
     margin-bottom: 0;
     padding-left: 175px;
-    padding-right: 560px;
   }
   .contacts__table tr {
     width: 100%;
@@ -2407,6 +2411,10 @@ template {
   .contacts__map--default {
     width: 525px;
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-desktop@1x.jpg");
+  }
+  .contacts__wrapper {
+    box-sizing: border-box;
+    padding-right: 560px;
   }
   .catalog__layout {
     display: -ms-flexbox;
@@ -2466,7 +2474,7 @@ template {
     top: 0;
     left: 0;
     width: 680px;
-    height: 455px;
+    height: 453px;
     border-bottom: none;
     border-right: 1px solid #cecece;
     background-image: url("../img/video-desktop@1x.jpg");

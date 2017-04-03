@@ -70,7 +70,7 @@ module.exports = function (grunt) {
       symbols: {
         files: [{
           expand: true,
-          src: ["build/img/*.svg"]
+          src: ["img/*.svg"]
         }]
       }
     },
@@ -94,6 +94,13 @@ module.exports = function (grunt) {
           src: ["*.html"],
           dest: "build"
         }]
+      },
+      js: {
+        files: [{
+          expand: true,
+          src: ["js/**"],
+          dest: "build"
+        }]
       }
     },
 
@@ -108,8 +115,8 @@ module.exports = function (grunt) {
         options: {
           server: "build/",
           watchTask: true,
-          notify: false,
-          open: true,
+          notify: true,
+          open: false,
           cors: true,
           ui: false
         }
@@ -121,8 +128,12 @@ module.exports = function (grunt) {
     },
 
     watch: {
+      js: {
+        files: ["js/**"],
+        tasks: ["copy:js"]
+      },
       html: {
-        files: ["*.html"],
+        files: ["js/*.js"],
         tasks: ["copy:html"]
       },
       style: {
