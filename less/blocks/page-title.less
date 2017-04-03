@@ -102,7 +102,7 @@
   }
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media @mobile-widths-only and (min-resolution: 144dpi), @mobile-widths-only and (min-resolution: 1.5dppx) {
   .page-title--index {
     background-image: url(../img/hero-mobile@2x.jpg);
     background-size: 575px auto;
@@ -113,8 +113,21 @@
   .page-title {
     position: relative;
     margin-top: -60px;
-    margin-bottom: 73px;
+    margin-bottom: 77px;
     border-top: 1px solid #ececec;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      display: block;
+      width: 100%;
+      height: 22px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
 
     &__wrapper {
       width: 550px;
@@ -149,7 +162,7 @@
     }
 
     &__link {
-      padding: 30px 36px;
+      padding: 31px 36px;
       padding-right: 28%;
       font-size: 20px;
       line-height: 30px;
@@ -165,12 +178,21 @@
   .page-title--index {
     background-image: url(../img/hero-desktop@2x.jpg);
     background-size: 1150px auto;
+    background-size: cover;
   }
 }
 
 @media @desktop-widths {
   .page-title {
-    margin-bottom: 120px;
+    margin-bottom: 118px;
+
+    &--index {
+      margin-bottom: 67px;
+    }
+
+    &::after {
+      height: 34px;
+    }
 
     &__wrapper {
       padding-bottom: 110px;
@@ -187,8 +209,7 @@
     }
 
     &__link {
-      padding: 30px 40px;
-      padding-right: 100px;
+      padding: 30px 100px 34px 40px;
     }
 
     &__link::after {

@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 66px;
+  margin-bottom: 60px;
   color: @main;
 
   &__layout {
@@ -16,13 +16,41 @@
   }
 
   &__container {
+    position: relative;
     height: 150px;
     border-top: 1px solid #cecece;
     border-bottom: 1px solid #cecece;
+    background: url("../img/video-mobile@1x.jpg") no-repeat center;
+  }
+
+  &__container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -37px;
+    margin-left: -51px;
+    transition: all 0.1s ease-in;
+    z-index: 1;
+    display: block;
+    width: 101px;
+    height: 77px;
+    background: url("../img/icon-play.svg") no-repeat center/cover;
+    cursor: pointer;
+  }
+
+  &__container:hover::before,
+  &__container:focus::before {
+    transform: scale(1.2);
+  }
+
+  &__container:active::before {
+    transform: scale(0.8);
+    opacity: 0.3;
   }
 
   &__wrapper {
-    margin: 25px 13.692% 25px 12.692%;
+    margin: 25px 13.692% 33px 12.692%;
   }
 
   &__discr {
@@ -33,6 +61,18 @@
     line-height: 24px;
     color: @minor;
     background-color: @light;
+  }
+}
+
+.video__container video {
+  display: none;
+  width: 100%;
+}
+
+@media @mobile-widths-only and (min-resolution: 144dpi), @mobile-widths-only and (min-resolution: 1.5dppx) {
+  .video__container {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 260px auto;
   }
 }
 
@@ -49,6 +89,7 @@
       order: -1;
       height: 455px;
       border-top: none;
+      background-image: url("../img/video-tablet@1x.jpg");
     }
 
     &__wrapper {
@@ -66,6 +107,13 @@
   }
 }
 
+@media @tablet-widths and (min-resolution: 144dpi), @tablet-widths and (min-resolution: 1.5dppx) {
+  .video__container {
+    background-image: url("../img/video-tablet@2x.jpg");
+    background-size: 668px auto;
+  }
+}
+
 @media @desktop-widths {
   .video {
     margin-bottom: 105px;
@@ -79,13 +127,13 @@
 
     &__container {
       position: absolute;
+      top: 0;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
       width: 680px;
-      height: 455px;
+      height: 453px;
       border-bottom: none;
       border-right: 1px solid #cecece;
+      background-image: url("../img/video-desktop@1x.jpg");
     }
 
     &__wrapper {
@@ -96,5 +144,16 @@
     &__discr {
       margin-bottom: 45px;
     }
+  }
+
+  .video__container::before {
+    margin-left: -41px;
+  }
+}
+
+@media @desktop-widths and (min-resolution: 144dpi), @desktop-widths and (min-resolution: 1.5dppx) {
+  .video__container {
+    background-image: url("../img/video-desktop@2x.jpg");
+    background-size: 682px auto;
   }
 }

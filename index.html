@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="page-header">
@@ -48,7 +49,7 @@
         </div>
       </nav>
       <section class="page-title page-title--index">
-        <h1 class="page-title__wrapper">Милые штуки ручной работы для дома</h1>
+        <h1 class="page-title__wrapper">Милые штуки ручной<br> работы для дома</h1>
         <ul class="page-title__promo">
           <li class="page-title__item"><a class="page-title__link  page-title__link--icon-lamp" href="#">Предметы<br>интерьера</a></li>
           <li class="page-title__item"><a class="page-title__link  page-title__link--icon-brick" href="#">Детские<br>игрушки</a></li>
@@ -96,12 +97,12 @@
         <div class="charter__wrapper">
           <h2 class="charter__title">Коротко о нас:</h2>
           <ul class="features__list">
-            <li class="features__item  features__item--flower">Экологически чистые материалы</li>
-            <li class="features__item  features__item--ball">Связано вручную с любовью и умилением</li>
-            <li class="features__item  features__item--money">Скандинавский стиль по российской цене</li>
-            <li class="features__item  features__item--rocket">Поддержка отечественного производителя</li>
-            <li class="features__item  features__item--heart">Увеличивает лайки на фотографиях</li>
-            <li class="features__item  features__item--gift">Поставляется в подарочной упаковке</li>
+            <li class="features__item  features__item--flower">Экологически<br> чистые материалы</li>
+            <li class="features__item  features__item--ball">Связано вручную с<br> любовью и умилением</li>
+            <li class="features__item  features__item--money">Скандинавский стиль<br> по российской цене</li>
+            <li class="features__item  features__item--rocket">Поддержка отечественного<br> производителя</li>
+            <li class="features__item  features__item--heart">Увеличивает лайки<br> на фотографиях</li>
+            <li class="features__item  features__item--gift">Поставляется в<br> подарочной упаковке</li>
           </ul>
         </div>
       </section>
@@ -119,11 +120,11 @@
             <button class="reviews__btn  reviews__btn--prev text-hidden" type="button">Предыдущий отзыв</button>
             <button class="reviews__btn  reviews__btn--next text-hidden" type="button">Предыдущий отзыв</button>
           </div>
-          <a class="btn" href="#" title="Написать свой отзыв">Написать</a>
+          <a class="reviews__feedback  btn" href="#" title="Написать свой отзыв">Написать</a>
         </div>
       </section>
       <section class="charter  contacts">
-        <div class="charter__wrapper">
+        <div class="charter__wrapper  contacts__wrapper">
           <h3 class="charter__title  charter__title--contacts">Контакты</h3>
           <table class="contacts__table">
             <tr>
@@ -232,5 +233,6 @@
     <div class="modal-overlay"></div>
     <script src="js/script.js" type="text/javascript" async></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/picturefill.min.js" type="text/javascript" async></script>
   </body>
 </html>

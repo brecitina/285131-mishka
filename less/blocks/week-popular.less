@@ -1,5 +1,6 @@
 .week-popular {
-  margin-bottom: 45px;
+  position: relative;
+  margin-bottom: 28px;
   color: @minor;
   background-color: @light;
   overflow: hidden;
@@ -8,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 18px 0 24px;
+    margin: 18px 0 43px;
   }
 
   &__discr {
@@ -62,8 +63,23 @@
   }
 }
 
+.week-popular::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
 @media @tablet-widths {
   .week-popular {
+      margin-bottom: 49px;
 
     &__layout {
       position: relative;
@@ -71,7 +87,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      margin: 50px 0;
+      margin: 50px 0 68px;
       padding: 0;
       padding-right: 378px;
     }
@@ -118,27 +134,38 @@
       line-height: 24px;
     }
   }
+
+  .week-popular::after {
+    height: 15px;
+  }
 }
 
 @media @desktop-widths {
   .week-popular {
+    padding-top: 52px;
+    margin-bottom: 59px;
 
     &__layout {
+      margin-bottom: 96px;
       padding-left: 175px;
       padding-right: 50%;
     }
 
     &__discr {
-      margin-bottom: 65px;
+      margin-bottom: 40px;
     }
 
     &__table {
-      margin-bottom: 88px;
+      margin-bottom: 81px;
     }
 
     &__review {
       width: 525px; /*картинка стоит мобильная*/
       height: 636px;
     }
+  }
+
+  .week-popular::after {
+    height: 23px;
   }
 }
