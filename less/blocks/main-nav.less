@@ -1,15 +1,14 @@
 .main-nav {
   position: relative;
   width: auto;
-  min-height: 80px;
+  min-height: 78px;
   z-index: 1;
 
   &__logo {
     display: block;
     width: 86px;
     height: 35px;
-    margin: 21px auto;
-    border-bottom: 1px solid #ececec;
+    margin: 21px auto 22px;
   }
 
 //кнопка открытия мобильного меню
@@ -182,6 +181,7 @@
 @media @mobile-widths-only {
   .main-nav {
     z-index: 3;
+    border-bottom: 1px solid #ececec;
 
     &--closed &__item {
       display: none;
@@ -192,6 +192,10 @@
       top: 0;
       right: 0;
       left: 0;
+    }
+
+    &__list {
+      border-top: 1px solid #ececec;
     }
 
     &--nojs &__wrapper {
@@ -224,7 +228,6 @@
       width: 114px;
       height: 46px;
       margin: 20px auto 20px 0;
-      border-bottom: none;
     }
 
     &__list {
