@@ -26,20 +26,24 @@
   &__btn--prev {
     transform: scaleX(-1);
   }
-}
 
-.reviews::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 6px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-size: contain;
-  background-repeat: repeat-x;
+  &__feedback {
+    font-size: 18px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
 }
 
 @media @tablet-widths {
@@ -64,6 +68,7 @@
       right: 0;
       width: 170px;
       z-index: 10;
+      font-size: 17px;
     }
 
     &__btns-layout {
@@ -75,10 +80,9 @@
       margin-bottom: 0;
       z-index: 10;
     }
-  }
-
-  .reviews::after {
-    height: 15px;
+    &::after {
+      height: 15px;
+    }
   }
 }
 
@@ -101,19 +105,19 @@
       background-repeat: no-repeat;
       background-position: 0 100%;
     }
-  }
 
-  .reviews__feedback {
-    width: 174px;
-    top: 85px;
-  }
+    &__feedback {
+      width: 174px;
+      top: 85px;
+    }
 
-  .reviews__btns-layout {
-    bottom: 104px;
-  }
+    &__btns-layout {
+      bottom: 104px;
+    }
 
-  .reviews::after {
-    height: 23px;
+    &::after {
+      height: 23px;
+    }
   }
 }
 

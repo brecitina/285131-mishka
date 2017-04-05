@@ -1,15 +1,14 @@
 .main-nav {
   position: relative;
   width: auto;
-  min-height: 80px;
+  min-height: 78px;
   z-index: 1;
 
   &__logo {
     display: block;
     width: 86px;
     height: 35px;
-    margin: 21px auto;
-    border-bottom: 1px solid #ececec;
+    margin: 21px auto 22px;
   }
 
 //кнопка открытия мобильного меню
@@ -128,6 +127,43 @@
     line-height: 24px
   }
 
+  &__link--search,
+  &__link--cart {
+    position: relative;
+
+    & svg {
+      position: absolute;
+      left: 9.375%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 19px;
+    }
+
+    & path {
+      fill-opacity: 0.2;
+    }
+
+    &:focus path,
+    &:hover path {
+      fill-opacity: 1;
+      fill: @green;
+    }
+
+    &:active path {
+      fill: @green;
+      fill-opacity: 0.3;
+    }
+  }
+
+  &__link--cart {
+
+    & svg {
+      width: 21px;
+      height: 18px;
+    }
+  }
+
   &__item:hover &__link[href],
   &__item:focus &__link[href] {
     color: fade(@main, 60%);
@@ -142,46 +178,10 @@
   }
 }
 
-.main-nav__link--search,
-.main-nav__link--cart {
-  position: relative;
-
-  & svg {
-    position: absolute;
-    left: 9.375%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 19px;
-    height: 19px;
-  }
-
-  & path {
-    fill-opacity: 0.2;
-  }
-
-  &:focus path,
-  &:hover path {
-    fill-opacity: 1;
-    fill: @green;
-  }
-
-  &:active path {
-    fill: @green;
-    fill-opacity: 0.3;
-  }
-}
-
-.main-nav__link--cart {
-
-  & svg {
-    width: 21px;
-    height: 18px;
-  }
-}
-
 @media @mobile-widths-only {
   .main-nav {
     z-index: 3;
+    border-bottom: 1px solid #ececec;
 
     &--closed &__item {
       display: none;
@@ -192,6 +192,10 @@
       top: 0;
       right: 0;
       left: 0;
+    }
+
+    &__list {
+      border-top: 1px solid #ececec;
     }
 
     &--nojs &__wrapper {
@@ -224,7 +228,6 @@
       width: 114px;
       height: 46px;
       margin: 20px auto 20px 0;
-      border-bottom: none;
     }
 
     &__list {
@@ -270,6 +273,14 @@
       font-size: 17px;
     }
 
+    &__link--search,
+    &__link--cart  {
+
+      & svg {
+        left: 34px;
+      }
+    }
+
     &__label {
       order: 4;
       padding: 18px 0;
@@ -279,15 +290,6 @@
       color: @minor;
     }
   }
-
-  .main-nav__link--search,
-  .main-nav__link--cart  {
-
-    & svg {
-      left: 34px;
-    }
-  }
-}
 
 @media @desktop-widths {
   .main-nav {

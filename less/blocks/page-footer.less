@@ -45,36 +45,36 @@
   .page-footer {
     position: relative;
 
-      &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 143px;
-      }
-
-      &__copyright {
-        width: 190px;
-        text-align: right;
-        border: none;
-      }
-  }
-
-  .page-footer__logo {
-    width: 190px;
-
-    & svg {
-      width: 102px;
-      height: 34px;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 143px;
     }
 
-    &:hover path,
-    &:focus path {
+    &__logo {
+      width: 190px;
+
+      & svg {
+        width: 102px;
+        height: 34px;
+      }
+    }
+
+    &__logo:hover path,
+    &__logo:focus path {
       fill: #46c1ae;
     }
 
-    &:active {
+    &__logo:active {
       fill: #46c1ae;
       opacity: 0.3;
+    }
+
+    &__copyright {
+      width: 190px;
+      text-align: right;
+      border: none;
     }
   }
 }
