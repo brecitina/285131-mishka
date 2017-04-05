@@ -54,29 +54,29 @@
     line-height: 24px;
     color: @minor;
   }
-}
 
-.catalog-item__price {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 24px 0;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 24px;
-  color: @main;
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 24px 0;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: @main;
+  }
 
-  & path {
+  &__price path {
     fill-opacity: 0.2;
   }
 
-  &:focus path,
-  &:hover path {
+  &__price:focus path,
+  &__price:hover path {
     fill-opacity: 1;
     fill: @green;
   }
 
-  &:active path {
+  &__active:focus path {
     fill: @green;
     fill-opacity: 0.3;
   }
