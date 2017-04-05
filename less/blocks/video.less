@@ -3,7 +3,7 @@
   color: @main;
 
   &__layout {
-    border: 1px solid #cecece;
+    border: 1px solid #ececec;
 
     &:hover,
     &:focus {
@@ -18,8 +18,7 @@
   &__container {
     position: relative;
     height: 150px;
-    border-top: 1px solid #cecece;
-    border-bottom: 1px solid #cecece;
+    margin: 0 -1px;
     background: url("../img/video-mobile@1x.jpg") no-repeat center;
   }
 
@@ -88,7 +87,8 @@
     &__container {
       order: -1;
       height: 455px;
-      border-top: none;
+      margin-top: -1px;
+      border-bottom: 1px solid #ececec;
       background-image: url("../img/video-tablet@1x.jpg");
     }
 
@@ -130,9 +130,8 @@
       top: 0;
       left: 0;
       width: 680px;
-      height: 453px;
+      margin-bottom: -1px;
       border-bottom: none;
-      border-right: 1px solid #cecece;
       background-image: url("../img/video-desktop@1x.jpg");
     }
 
